@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Health Assistant - PersonalizedHealth AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="banner-left">
+        <span class="pulse-dot"></span>
+        <span><strong>Urgent Medical Notice:</strong> If experiencing acute chest pain, shortness of breath, or uncontrolled bleeding, dial 112 / 911 immediately.</span>
+      </div>
+      <div class="banner-actions">
+        <a href="tel:112" class="emergency-btn">Call 112 / 911</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="dashboard.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span>PersonalizedHealth <span style="color:var(--primary); font-weight:600;">AI</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="chat.html" class="nav-link active">AI Assistant</a></li>
+        <li><a href="assessment.html" class="nav-link">Symptom Checker</a></li>
+        <li><a href="nearby-healthcare.html" class="nav-link">Find Doctors</a></li>
+        <li><a href="history.html" class="nav-link">Health Timeline</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- Dynamically rendered -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Chat Main Workspace -->
+  <main style="padding: 30px 0 50px;">
+    <div class="container" style="max-width: 980px;">
+
+      <!-- Convert to Assessment Banner (appears once symptoms are discussed) -->
+      <div id="convert-assessment-banner" style="display:none; justify-content:space-between; align-items:center; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:var(--radius-btn); padding:12px 18px; margin-bottom:16px;">
+        <div style="font-size:13.5px; color:#065f46;">
+          <strong>Structured Symptoms Detected:</strong> You can convert this consultation into a formal clinical disease-risk assessment.
+        </div>
+        <a id="convert-assessment-link" href="assessment.html" class="btn btn-primary btn-sm">Run Full Assessment &rarr;</a>
+      </div>
+
+      <!-- Chat Container -->
+      <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--success-emerald);"></div>
+            <div>
+              <div style="font-weight: 700; color: var(--text-main); font-size: 15px;">PersonalizedHealth Clinical AI Assistant</div>
+              <div style="font-size: 11.5px; color: var(--text-muted);">Adaptive Questioning &bull; Multilingual Support &bull; Heuristic Reasoning</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <!-- Language Switcher -->
+            <select id="chat-language-select" class="form-control" style="width: auto; padding: 6px 12px; font-size: 13px;">
+              <option value="en">English</option>
+              <option value="hi">हिंदी (Hindi)</option>
+            </select>
+
+            <button onclick="startNewSession()" class="btn btn-outline btn-sm" title="Start fresh consultation">+ New Session</button>
+          </div>
+        </div>
+
+        <!-- Chat Messages Stream -->
+        <div id="chat-messages" class="chat-messages">
+          <!-- Populated dynamically by chat.js -->
+        </div>
+
+        <!-- Prompt Suggestions -->
+        <div class="chat-prompt-pills">
+          <span style="font-size: 12px; color: var(--text-muted); align-self: center; margin-right: 4px;">Suggestions:</span>
+          <button class="prompt-pill" onclick="sendQuickPrompt('I have had high fever and dry cough for 3 days')">Fever & dry cough</button>
+          <button class="prompt-pill" onclick="sendQuickPrompt('I feel chest pain, shortness of breath, and cold sweat')">Chest discomfort & sweat</button>
+          <button class="prompt-pill" onclick="sendQuickPrompt('Severe throbbing headache with nausea and light sensitivity')">Throbbing headache</button>
+          <button class="prompt-pill" onclick="sendQuickPrompt('मुझको तेज बुखार और बदन दर्द है')">तेज बुखार और दर्द (Hindi)</button>
+        </div>
+
+        <!-- Input Dock -->
+        <div class="chat-input-bar">
+          <button id="chat-mic-btn" class="mic-btn" title="Voice Input (Speech-to-Text)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" y1="19" x2="12" y2="23"/>
+              <line x1="8" y1="23" x2="16" y2="23"/>
+            </svg>
+          </button>
+
+          <input type="text" id="chat-input" class="form-control" placeholder="Describe your symptoms, how long you've had them, severity..." autocomplete="off">
+
+          <button id="chat-send-btn" class="btn btn-primary" style="padding: 10px 18px;">
+            <span>Send</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="medical-disclaimer">
+        <strong>Academic & Clinical Protocol Notice:</strong> Conversations are analyzed for preliminary disease-risk estimation and healthcare navigation. The assistant does NOT prescribe medication or replace certified medical consultations.
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>PersonalizedHealth AI</strong> &copy; 2026. Academic Health Project.</div>
+      <div><a href="dashboard.html">Dashboard</a> &bull; <a href="assessment.html">Assessment</a> &bull; <a href="nearby-healthcare.html">Find Care</a></div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

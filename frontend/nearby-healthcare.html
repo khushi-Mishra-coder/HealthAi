@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nearby Doctors & Healthcare - PersonalizedHealth AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Leaflet Interactive Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 480px;
+      width: 100%;
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-card);
+      box-shadow: var(--shadow-card);
+      z-index: 10;
+    }
+    .custom-marker-pin {
+      background: var(--primary);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      font-weight: 700;
+      border: 2px solid #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="banner-left">
+        <span class="pulse-dot"></span>
+        <span><strong>Emergency Care:</strong> If experiencing life-threatening symptoms, dial 112 / 911 or head to the closest emergency room immediately.</span>
+      </div>
+      <div class="banner-actions">
+        <a href="tel:112" class="emergency-btn">Call 112 / 911</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="dashboard.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span>PersonalizedHealth <span style="color:var(--primary); font-weight:600;">AI</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="chat.html" class="nav-link">AI Assistant</a></li>
+        <li><a href="assessment.html" class="nav-link">Symptom Checker</a></li>
+        <li><a href="nearby-healthcare.html" class="nav-link active">Find Doctors</a></li>
+        <li><a href="history.html" class="nav-link">Health Timeline</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 30px 0 60px;">
+    <div class="container">
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
+        <div>
+          <h1 style="font-size: 26px; margin-bottom: 4px;">Nearby Doctors, Clinics & Hospitals</h1>
+          <p style="color: var(--text-muted); font-size: 14px;">Locate verified specialists and emergency healthcare facilities nearest to your current location.</p>
+        </div>
+        <button id="locate-me-btn" class="btn btn-outline btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          Use My Current Location
+        </button>
+      </div>
+
+      <!-- Filters Toolbar -->
+      <div class="card" style="padding: 18px; margin-bottom: 24px;">
+        <div class="grid-3" style="gap: 16px;">
+          <div>
+            <label class="form-label" for="specialty-filter">Required Specialty</label>
+            <select id="specialty-filter" class="form-control">
+              <option value="ALL">All Specialties</option>
+              <option value="Emergency Medicine">Emergency Medicine / ER</option>
+              <option value="Cardiologist">Cardiologist (Heart)</option>
+              <option value="Pulmonologist">Pulmonologist (Lungs/Breathing)</option>
+              <option value="General Physician">General Physician / Family Doctor</option>
+              <option value="Neurologist">Neurologist (Brain/Nerves)</option>
+              <option value="Gastroenterologist">Gastroenterologist (Digestive)</option>
+              <option value="Dermatologist">Dermatologist (Skin)</option>
+              <option value="ENT Specialist">ENT Specialist (Ear, Nose, Throat)</option>
+              <option value="Pediatrician">Pediatrician (Child Care)</option>
+              <option value="Orthopedic">Orthopedic (Bones/Joints)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="form-label" for="distance-filter">Search Radius</label>
+            <select id="distance-filter" class="form-control">
+              <option value="5">Within 5 km</option>
+              <option value="10" selected>Within 10 km</option>
+              <option value="25">Within 25 km</option>
+              <option value="50">Within 50 km</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="form-label" for="facility-search">Search Facility Name / City</label>
+            <input type="text" id="facility-search" class="form-control" placeholder="e.g. City Hospital, Apollo, Fortis...">
+          </div>
+        </div>
+      </div>
+
+      <!-- Map & Directory Grid -->
+      <div class="grid-split">
+        <!-- Interactive Leaflet Map -->
+        <div>
+          <div id="map"></div>
+          <div style="display: flex; gap: 14px; margin-top: 12px; font-size: 12.5px; color: var(--text-muted);">
+            <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 10px; height: 10px; background: #ef4444; border-radius: 50%;"></span> Hospital / Emergency</span>
+            <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 10px; height: 10px; background: var(--primary); border-radius: 50%;"></span> Specialist Clinic</span>
+            <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 10px; height: 10px; background: #10b981; border-radius: 50%;"></span> Diagnostic & Pharmacy</span>
+          </div>
+        </div>
+
+        <!-- Healthcare Directory List -->
+        <div style="display: flex; flex-direction: column; gap: 14px; max-height: 520px; overflow-y: auto; padding-right: 4px;" id="facilities-list">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="medical-disclaimer" style="margin-top: 36px;">
+        <strong>Healthcare Navigation Disclaimer:</strong> Provider listings and coordinates are compiled for academic demonstration and initial care navigation. Verify facility hours and specialist availability directly before visiting.
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>PersonalizedHealth AI</strong> &copy; 2026. Academic Health Project.</div>
+      <div><a href="dashboard.html">Dashboard</a> &bull; <a href="chat.html">AI Assistant</a> &bull; <a href="assessment.html">Assessment</a></div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <!-- Leaflet Interactive Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Sample verified healthcare facilities data
+    const HEALTHCARE_FACILITIES = [
+      {
+        id: 1,
+        name: "City Central Multi-Specialty Hospital & Trauma Center",
+        type: "Hospital",
+        specialties: ["Emergency Medicine", "Cardiologist", "Pulmonologist", "General Physician"],
+        address: "42 Healthcare Boulevard, Central District",
+        phone: "+91 11 2658 8500 / 112",
+        rating: 4.8,
+        distanceKm: 2.1,
+        lat: 28.5672,
+        lng: 77.2100,
+        emergency: true,
+        openHours: "24/7 Emergency & ICU"
+      },
+      {
+        id: 2,
+        name: "Metro Heart & Vascular Institute",
+        type: "Specialty Clinic",
+        specialties: ["Cardiologist", "Emergency Medicine"],
+        address: "18 Ring Road, South Sector",
+        phone: "+91 11 4123 4567",
+        rating: 4.9,
+        distanceKm: 3.4,
+        lat: 28.5420,
+        lng: 77.2010,
+        emergency: true,
+        openHours: "Open 24 Hours"
+      },
+      {
+        id: 3,
+        name: "Chest & Pulmonary Care Clinic",
+        type: "Clinic",
+        specialties: ["Pulmonologist", "General Physician"],
+        address: "7B Medical Enclave, Park Road",
+        phone: "+91 11 2345 6789",
+        rating: 4.7,
+        distanceKm: 4.2,
+        lat: 28.5800,
+        lng: 77.2250,
+        emergency: false,
+        openHours: "08:00 AM - 08:00 PM"
+      },
+      {
+        id: 4,
+        name: "Apex Neurological & Stroke Centre",
+        type: "Hospital",
+        specialties: ["Neurologist", "Emergency Medicine"],
+        address: "105 Institutional Area, Phase II",
+        phone: "+91 11 3456 7890",
+        rating: 4.8,
+        distanceKm: 5.6,
+        lat: 28.5300,
+        lng: 77.2350,
+        emergency: true,
+        openHours: "24/7 Stroke Unit"
+      },
+      {
+        id: 5,
+        name: "Family Health & General Practice Center",
+        type: "Clinic",
+        specialties: ["General Physician", "Pediatrician"],
+        address: "12 Community Center, Market Complex",
+        phone: "+91 11 4567 8901",
+        rating: 4.6,
+        distanceKm: 1.8,
+        lat: 28.5600,
+        lng: 77.1950,
+        emergency: false,
+        openHours: "09:00 AM - 09:00 PM"
+      },
+      {
+        id: 6,
+        name: "Skin & Allergy Specialty Care",
+        type: "Clinic",
+        specialties: ["Dermatologist"],
+        address: "88 Ring View Arcade, Floor 2",
+        phone: "+91 11 5678 9012",
+        rating: 4.7,
+        distanceKm: 4.8,
+        lat: 28.5720,
+        lng: 77.1850,
+        emergency: false,
+        openHours: "10:00 AM - 07:00 PM"
+      }
+    ];
+
+    let map = null;
+    let markersLayer = null;
+    let userLat = 28.5672;
+    let userLng = 77.2100;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check query param for pre-selected specialty
+      const urlParams = new URLSearchParams(window.location.search);
+      const specParam = urlParams.get('specialty');
+      if (specParam) {
+        const select = document.getElementById('specialty-filter');
+        for (let opt of select.options) {
+          if (specParam.toLowerCase().includes(opt.value.toLowerCase()) || opt.value.toLowerCase().includes(specParam.toLowerCase())) {
+            select.value = opt.value;
+            break;
+          }
+        }
+      }
+
+      initMap();
+      renderFacilities();
+
+      // Filter events
+      document.getElementById('specialty-filter').addEventListener('change', renderFacilities);
+      document.getElementById('distance-filter').addEventListener('change', renderFacilities);
+      document.getElementById('facility-search').addEventListener('input', renderFacilities);
+
+      document.getElementById('locate-me-btn').addEventListener('click', locateUser);
+    });
+
+    function initMap() {
+      map = L.map('map').setView([userLat, userLng], 13);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      markersLayer = L.layerGroup().addTo(map);
+
+      // Add user location pin
+      L.circleMarker([userLat, userLng], {
+        radius: 8,
+        fillColor: '#2563eb',
+        color: '#fff',
+        weight: 3,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(map).bindPopup('<strong>Your Current Location</strong>').openPopup();
+    }
+
+    function locateUser() {
+      if (navigator.geolocation) {
+        showToast('Acquiring your GPS location...', 'info');
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            userLat = pos.coords.latitude;
+            userLng = pos.coords.longitude;
+            map.setView([userLat, userLng], 13);
+            showToast('Location updated successfully!', 'success');
+            renderFacilities();
+          },
+          (err) => {
+            showToast('Could not access GPS. Using default metropolitan center.', 'warning');
+          }
+        );
+      } else {
+        showToast('Geolocation is not supported by your browser.', 'error');
+      }
+    }
+
+    async function renderFacilities() {
+      const specialty = document.getElementById('specialty-filter').value;
+      const maxDist = parseFloat(document.getElementById('distance-filter').value) || 25;
+      const query = document.getElementById('facility-search').value.toLowerCase().trim();
+
+      let facilities = [];
+      try {
+        facilities = await HealthcareAPI.getFacilities({
+          lat: userLat,
+          lng: userLng,
+          specialty: specialty === 'ALL' ? '' : specialty,
+          radiusKm: maxDist,
+          query: query
+        });
+      } catch (err) {
+        console.warn('Backend healthcare API call failed, using client-side catalog:', err);
+      }
+
+      if (!facilities || facilities.length === 0) {
+        facilities = HEALTHCARE_FACILITIES.filter(f => {
+          const matchSpecialty = specialty === 'ALL' || f.specialties.some(s => s.toLowerCase().includes(specialty.toLowerCase()));
+          const matchDistance = f.distanceKm <= maxDist;
+          const matchQuery = !query || f.name.toLowerCase().includes(query) || f.address.toLowerCase().includes(query);
+          return matchSpecialty && matchDistance && matchQuery;
+        });
+      }
+
+      // Clear map markers
+      markersLayer.clearLayers();
+
+      const listContainer = document.getElementById('facilities-list');
+
+      if (!facilities || facilities.length === 0) {
+        listContainer.innerHTML = `
+          <div class="card" style="text-align: center; padding: 36px 16px; color: var(--text-muted);">
+            No healthcare facilities match your current filter criteria. Try increasing the search radius.
+          </div>
+        `;
+        return;
+      }
+
+      // Add markers and build cards
+      listContainer.innerHTML = facilities.map(f => {
+        const lat = f.latitude || f.lat;
+        const lng = f.longitude || f.lng;
+        const isEmergency = f.emergency24x7 !== undefined ? f.emergency24x7 : f.emergency;
+        const color = isEmergency ? '#ef4444' : '#0d9488';
+
+        // Add Leaflet marker
+        if (lat && lng) {
+          const marker = L.circleMarker([lat, lng], {
+            radius: 9,
+            fillColor: color,
+            color: '#ffffff',
+            weight: 2,
+            fillOpacity: 0.9
+          }).bindPopup(`
+            <div style="font-size:13px;">
+              <strong>${f.name}</strong><br>
+              <span style="color:#64748b;">${(f.specialties || []).join(', ')}</span><br>
+              <strong>Phone:</strong> ${f.phone}<br>
+              <a href="tel:${(f.phone || '').split('/')[0].trim()}" style="color:#0d9488; font-weight:700;">Call Facility</a>
+            </div>
+          `);
+          markersLayer.addLayer(marker);
+        }
+
+        return `
+          <div class="card card-hover" style="padding: 16px; border-left: 4px solid ${color};">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+              <div>
+                <h3 style="font-size: 16px; color: var(--text-main); margin-bottom: 4px;">${f.name}</h3>
+                <div style="font-size: 12.5px; color: var(--text-muted); margin-bottom: 6px;">
+                  ${f.address} &bull; <strong>${f.distanceKm} km away</strong>
+                </div>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px;">
+                  ${f.emergency ? '<span class="badge badge-urgent">24/7 Emergency</span>' : ''}
+                  ${f.specialties.map(s => `<span class="badge badge-teal">${s}</span>`).join('')}
+                </div>
+                <div style="font-size: 12px; color: var(--text-subtle);">
+                  Hours: ${f.openHours} &bull; Rating: &#9733; ${f.rating} / 5.0
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border-subtle);">
+              <a href="tel:${f.phone.split('/')[0].trim()}" class="btn btn-outline btn-sm">Call ${f.phone.split('/')[0].trim()}</a>
+              <button onclick="focusFacility(${f.lat}, ${f.lng})" class="btn btn-primary btn-sm">View on Map &rarr;</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function focusFacility(lat, lng) {
+      map.setView([lat, lng], 15);
+      showToast('Centered on facility', 'info');
+    }
+  </script>
+</body>
+</html>

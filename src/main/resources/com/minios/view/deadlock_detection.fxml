@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.minios.controllers.DeadlockController"
+      spacing="20" styleClass="main-content">
+
+    <VBox styleClass="header">
+        <Text text="Deadlock Detection (Banker's Algorithm)" styleClass="title-text"/>
+        <Text text="Simulate resource allocation and avoid system deadlock using Banker's Algorithm." style="-fx-fill: -text-muted;"/>
+    </VBox>
+
+    <HBox spacing="20">
+        <VBox styleClass="card" spacing="15" prefWidth="300">
+            <Text text="System Setup" styleClass="card-title"/>
+            
+            <Label text="Available Resources (A B C):" textFill="white"/>
+            <TextField fx:id="txtAvailable" text="3 3 2" promptText="e.g. 3 3 2"/>
+
+            <Separator style="-fx-background-color: -border-color;"/>
+            
+            <Button text="Check for Safe State" onAction="#handleCheckSafeState" maxWidth="Infinity" styleClass="button-primary"/>
+            
+            <VBox fx:id="resultBox" visible="false" spacing="10" style="-fx-padding: 10; -fx-background-color: rgba(0,0,0,0.2); -fx-background-radius: 5;">
+                <Text fx:id="txtStatus" text="SAFE" style="-fx-font-weight: bold; -fx-fill: #4CAF50; -fx-font-size: 16;"/>
+                <Text fx:id="txtSequence" text="Sequence: P1 -> P3 -> P0" style="-fx-fill: white; -fx-wrapping-width: 260;"/>
+            </VBox>
+        </VBox>
+
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" spacing="10">
+            <Text text="Allocation &amp; Max Matrices" styleClass="card-title"/>
+            <TableView fx:id="matrixTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colProcess" text="Process" prefWidth="100"/>
+                    <TableColumn fx:id="colAllocation" text="Allocation (A B C)" prefWidth="150"/>
+                    <TableColumn fx:id="colMax" text="Max (A B C)" prefWidth="150"/>
+                    <TableColumn fx:id="colNeed" text="Need (A B C)" prefWidth="150"/>
+                </columns>
+            </TableView>
+            <HBox spacing="10">
+                <TextField fx:id="txtAllocInput" promptText="Alloc (0 1 0)" HBox.hgrow="ALWAYS"/>
+                <TextField fx:id="txtMaxInput" promptText="Max (7 5 3)" HBox.hgrow="ALWAYS"/>
+                <Button text="Add" onAction="#handleAddMatrixEntry" styleClass="button-secondary"/>
+            </HBox>
+        </VBox>
+    </HBox>
+</VBox>

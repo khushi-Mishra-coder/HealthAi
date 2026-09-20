@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assessment Report - PersonalizedHealth AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="banner-left">
+        <span class="pulse-dot"></span>
+        <span><strong>Emergency Protocol:</strong> In life-threatening circumstances (sudden paralysis, chest pain, profuse bleeding), call 112 / 911 immediately.</span>
+      </div>
+      <div class="banner-actions">
+        <a href="tel:112" class="emergency-btn">Call 112 / 911</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="dashboard.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span>PersonalizedHealth <span style="color:var(--primary); font-weight:600;">AI</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="chat.html" class="nav-link">AI Assistant</a></li>
+        <li><a href="assessment.html" class="nav-link">Symptom Checker</a></li>
+        <li><a href="nearby-healthcare.html" class="nav-link">Find Doctors</a></li>
+        <li><a href="history.html" class="nav-link">Health Timeline</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- Filled dynamically -->
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 40px 0 60px;">
+    <div class="container" style="max-width: 960px;">
+
+      <!-- Critical Emergency Callout (Conditional) -->
+      <div id="emergency-alert-card" style="display: none; background: #fef2f2; border: 2px solid #ef4444; border-radius: var(--radius-card); padding: 24px; margin-bottom: 28px;">
+        <div style="display: flex; gap: 16px; align-items: flex-start;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: #ef4444; color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div>
+            <h2 style="color: #991b1b; font-size: 20px; margin-bottom: 6px;">HIGH-ACUITY / EMERGENCY TRIAGE INDICATION</h2>
+            <p style="color: #7f1d1d; font-size: 14.5px; line-height: 1.6; margin-bottom: 14px;" id="emergency-action-text">
+              Your reported symptoms contain potential emergency indicators. Please seek immediate medical care at the nearest Emergency Room.
+            </p>
+            <a href="tel:112" class="btn btn-danger btn-lg">Dial Emergency Services (112 / 911)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Report Header -->
+      <div class="card" style="margin-bottom: 24px; border-top: 5px solid var(--primary);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+          <div>
+            <span id="risk-level-badge" class="badge badge-teal" style="font-size: 13px; margin-bottom: 8px;">Risk Level: Calculating...</span>
+            <h1 style="font-size: 28px; margin-bottom: 6px;" id="top-disease-name">Preliminary Clinical Indication</h1>
+            <p style="color: var(--text-muted); font-size: 14px;" id="report-timestamp">Assessment generated just now</p>
+          </div>
+
+          <div style="display: flex; gap: 10px;" class="no-print">
+            <button onclick="window.print()" class="btn btn-outline btn-sm">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print / Save PDF
+            </button>
+            <a id="find-specialist-btn" href="nearby-healthcare.html" class="btn btn-primary btn-sm">Find Nearby Specialist &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Primary Match Metrics -->
+        <div class="grid-3" style="gap: 16px; margin-top: 20px;">
+          <div style="padding: 16px; background: var(--bg-subtle); border-radius: var(--radius-btn);">
+            <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Confidence Level</div>
+            <div style="font-size: 26px; font-weight: 800; color: var(--primary); margin-top: 4px;" id="confidence-percentage">--%</div>
+            <div style="height: 6px; background: #e2e8f0; border-radius: 3px; margin-top: 8px; overflow: hidden;">
+              <div id="confidence-bar" style="height: 100%; width: 0%; background: var(--primary); transition: width 0.8s ease;"></div>
+            </div>
+          </div>
+
+          <div style="padding: 16px; background: var(--bg-subtle); border-radius: var(--radius-btn);">
+            <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Recommended Specialist</div>
+            <div style="font-size: 18px; font-weight: 700; color: var(--text-main); margin-top: 6px;" id="suggested-specialty">General Physician</div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">For formal clinical verification</div>
+          </div>
+
+          <div style="padding: 16px; background: var(--bg-subtle); border-radius: var(--radius-btn);">
+            <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Reported Symptoms</div>
+            <div style="font-size: 13.5px; font-weight: 600; color: var(--text-main); margin-top: 6px;" id="matched-symptoms-list">--</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Healthcare Navigation & Personalized Recommendations -->
+      <div class="card" style="margin-bottom: 24px;">
+        <h2 style="font-size: 18px; margin-bottom: 12px;">Healthcare Navigation Guidance</h2>
+        <div id="navigation-action-box" style="padding: 16px; background: #f0fdfa; border-left: 4px solid var(--primary); border-radius: var(--radius-btn); font-size: 14.5px; line-height: 1.6; margin-bottom: 16px;">
+          <!-- Action advice -->
+        </div>
+
+        <div id="personalized-notes-box" style="font-size: 14px; line-height: 1.6; color: var(--text-body); white-space: pre-line;">
+          <!-- Personalized recommendation -->
+        </div>
+
+        <!-- Contraindication / Allergy Alert -->
+        <div id="contraindication-box" style="margin-top: 16px; padding: 12px 16px; background: #fffbeb; border-radius: var(--radius-btn); border: 1px solid #fde68a; font-size: 13px; color: #92400e;">
+          <!-- Contraindications -->
+        </div>
+      </div>
+
+      <!-- Top-5 Differential Diagnoses Section -->
+      <div class="card" style="margin-bottom: 24px;">
+        <h2 style="font-size: 18px; margin-bottom: 14px;">Top-5 Explainable Differential Diagnoses</h2>
+        <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 20px;">
+          Candidate conditions evaluated by the Machine Learning model trained on 261 diseases, ranked by probabilistic correlation.
+        </p>
+
+        <div id="differential-table-container" style="overflow-x: auto;">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Bottom Actions -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;" class="no-print">
+        <a href="assessment.html" class="btn btn-outline">&larr; New Assessment</a>
+        <div style="display: flex; gap: 12px;">
+          <a href="chat.html" class="btn btn-secondary">Discuss with AI Health Assistant</a>
+          <a id="nearby-care-cta" href="nearby-healthcare.html" class="btn btn-primary">Find Nearby Healthcare &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="medical-disclaimer" style="margin-top: 36px;">
+        <strong>Academic Research Disclaimer:</strong> This disease-risk assessment is derived from machine learning heuristics and statistical classification on 489 symptom features. It is strictly non-diagnostic. Never ignore professional medical advice or delay seeking care because of preliminary digital assessments.
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>PersonalizedHealth AI</strong> &copy; 2026. Academic Health Project.</div>
+      <div><a href="dashboard.html">Dashboard</a> &bull; <a href="chat.html">AI Assistant</a> &bull; <a href="assessment.html">Assessment</a></div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dataStr = sessionStorage.getItem('healthai_last_assessment');
+      if (!dataStr) {
+        // No assessment found, show fallback
+        document.getElementById('top-disease-name').textContent = 'No Assessment Found';
+        document.getElementById('navigation-action-box').innerHTML = `
+          Please complete a <a href="assessment.html" style="font-weight:700;">Symptom Assessment</a> first to view your personalized clinical report.
+        `;
+        return;
+      }
+
+      const report = JSON.parse(dataStr);
+      const ml = report.mlPrediction || {};
+
+      // Emergency Callout
+      if (report.emergencyFlag || report.riskLevel === 'High Risk') {
+        const alertCard = document.getElementById('emergency-alert-card');
+        alertCard.style.display = 'block';
+        if (report.navigationAction) {
+          document.getElementById('emergency-action-text').textContent = report.navigationAction;
+        }
+      }
+
+      // Risk Badge
+      const riskBadge = document.getElementById('risk-level-badge');
+      riskBadge.textContent = `Risk Level: ${report.riskLevel || 'Moderate'}`;
+      if (report.riskLevel === 'High Risk') riskBadge.className = 'badge badge-urgent';
+      else if (report.riskLevel?.includes('Moderate')) riskBadge.className = 'badge badge-warning';
+      else riskBadge.className = 'badge badge-success';
+
+      // Top Disease & Confidence
+      document.getElementById('top-disease-name').textContent = ml.top_disease || 'Health Assessment';
+      const conf = Math.round((ml.confidence || 0.6) * 100);
+      document.getElementById('confidence-percentage').textContent = `${conf}%`;
+      setTimeout(() => {
+        document.getElementById('confidence-bar').style.width = `${conf}%`;
+      }, 100);
+
+      // Specialty & Navigation
+      const specialty = report.primarySpecialty || ml.suggested_specialty || 'General Physician';
+      document.getElementById('suggested-specialty').textContent = specialty;
+      document.getElementById('matched-symptoms-list').textContent = (report.relevantSymptoms || []).join(', ') || 'Reported symptoms';
+
+      const findBtn = document.getElementById('find-specialist-btn');
+      const nearbyCta = document.getElementById('nearby-care-cta');
+      const careUrl = `nearby-healthcare.html?specialty=${encodeURIComponent(specialty)}`;
+      if (findBtn) findBtn.href = careUrl;
+      if (nearbyCta) nearbyCta.href = careUrl;
+
+      // Guidance & Notes
+      document.getElementById('navigation-action-box').textContent = report.navigationAction || ml.guidance || 'Consult a certified physician for evaluation.';
+      document.getElementById('personalized-notes-box').textContent = report.personalizedRecommendations || '';
+
+      // Contraindications
+      const contraBox = document.getElementById('contraindication-box');
+      if (report.contraindicationWarnings && !report.contraindicationWarnings.includes('No active contraindication')) {
+        contraBox.style.display = 'block';
+        contraBox.textContent = report.contraindicationWarnings;
+      } else {
+        contraBox.style.display = 'none';
+      }
+
+      // Render Top-5 Differential Diagnoses Table
+      const diffList = ml.differential_diagnoses || [];
+      const tableContainer = document.getElementById('differential-table-container');
+
+      if (diffList.length > 0) {
+        tableContainer.innerHTML = `
+          <table style="width:100%; border-collapse:collapse; font-size:14px; text-align:left;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-subtle); color: var(--text-muted); font-size: 12.5px; text-transform: uppercase;">
+                <th style="padding: 10px 14px;">Rank & Candidate Disease</th>
+                <th style="padding: 10px 14px;">Probability</th>
+                <th style="padding: 10px 14px;">Matched Symptoms</th>
+                <th style="padding: 10px 14px;">Specialty</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${diffList.map((d, idx) => {
+                const probPct = Math.round((d.probability || 0) * 100);
+                const matched = (d.matched_symptoms || []).join(', ') || 'Clinical pattern';
+                return `
+                  <tr style="border-bottom: 1px solid var(--border-subtle); background:${idx === 0 ? '#f0fdfa' : 'transparent'};">
+                    <td style="padding: 12px 14px; font-weight: 600; color: var(--text-main);">
+                      #${idx + 1}. ${d.disease}
+                      ${idx === 0 ? '<span class="badge badge-teal" style="margin-left:6px; font-size:11px;">Top Match</span>' : ''}
+                    </td>
+                    <td style="padding: 12px 14px;">
+                      <div style="font-weight: 700; color: var(--primary);">${probPct}%</div>
+                      <div style="width: 70px; height: 5px; background: #e2e8f0; border-radius: 3px; margin-top: 3px;">
+                        <div style="width: ${probPct}%; height: 100%; background: var(--primary);"></div>
+                      </div>
+                    </td>
+                    <td style="padding: 12px 14px; color: var(--text-muted); font-size: 13px;">${matched}</td>
+                    <td style="padding: 12px 14px;">
+                      <span class="badge badge-teal" style="font-size: 12px;">${d.suggested_specialty}</span>
+                    </td>
+                  </tr>
+                `;
+              }).join('')}
+            </tbody>
+          </table>
+        `;
+      } else {
+        tableContainer.innerHTML = `<p style="color:var(--text-muted);">No differential diagnoses available.</p>`;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - PersonalizedHealth AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh; background:#f1f5f9; padding:20px;">
+
+  <div style="margin-bottom: 24px; text-align: center;">
+    <a href="index.html" class="brand-logo" style="justify-content: center;">
+      <div class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+      </div>
+      <span>PersonalizedHealth <span style="color:var(--primary); font-weight:600;">AI</span></span>
+    </a>
+    <p style="color: var(--text-muted); font-size: 14px; margin-top: 6px;">Sign in to your personalized health portal</p>
+  </div>
+
+  <div class="card" style="width: 100%; max-width: 440px; padding: 32px;">
+    <h2 style="font-size: 22px; margin-bottom: 6px;">Welcome Back</h2>
+    <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 24px;">Enter your credentials to access your health records and AI consultations.</p>
+
+    <div id="login-alert" style="display:none; padding:10px 14px; border-radius:var(--radius-btn); margin-bottom:18px; font-size:13px;"></div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input type="email" id="email" class="form-control" placeholder="name@example.com" required autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+          <label class="form-label" for="password" style="margin-bottom:0;">Password</label>
+        </div>
+        <input type="password" id="password" class="form-control" placeholder="••••••••" required autocomplete="current-password">
+      </div>
+
+      <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%; padding:12px; margin-top:8px;">Sign In</button>
+    </form>
+
+    <div style="margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border-subtle); text-align: center; font-size: 13.5px; color: var(--text-muted);">
+      Don't have an account yet? <a href="register.html" style="font-weight:600;">Register Free</a>
+    </div>
+
+    <!-- Demo Credentials Helper -->
+    <div style="margin-top: 20px; background: var(--bg-subtle); border-radius: var(--radius-btn); padding: 12px; font-size: 12px; color: var(--text-body);">
+      <div style="font-weight: 700; margin-bottom: 4px; color: var(--text-main);">Quick Demo Logins:</div>
+      <div><strong>Patient:</strong> <span style="cursor:pointer; color:var(--primary); text-decoration:underline;" onclick="fillCreds('patient@healthai.com', 'Password123')">patient@healthai.com / Password123</span></div>
+      <div><strong>Doctor:</strong> <span style="cursor:pointer; color:var(--primary); text-decoration:underline;" onclick="fillCreds('doctor@healthai.com', 'Doctor123!')">doctor@healthai.com / Doctor123!</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top: 24px;">
+    <a href="index.html" style="font-size: 13px; color: var(--text-muted);">&larr; Back to Home</a>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script>
+    function fillCreds(email, pass) {
+      document.getElementById('email').value = email;
+      document.getElementById('password').value = pass;
+    }
+
+    const form = document.getElementById('login-form');
+    const alertBox = document.getElementById('login-alert');
+    const submitBtn = document.getElementById('submit-btn');
+
+    // Check if session expired
+    if (new URLSearchParams(window.location.search).get('expired')) {
+      alertBox.style.display = 'block';
+      alertBox.className = 'badge-warning';
+      alertBox.textContent = 'Your session has expired. Please sign in again.';
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      alertBox.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Signing in...';
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+
+      try {
+        await AuthAPI.login(email, password);
+        showToast('Successfully signed in!', 'success');
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 500);
+      } catch (err) {
+        alertBox.style.display = 'block';
+        alertBox.style.background = 'var(--urgent-bg)';
+        alertBox.style.color = 'var(--urgent-red-dark)';
+        alertBox.style.border = '1px solid var(--urgent-border)';
+        alertBox.textContent = err.message || 'Login failed. Please check your credentials.';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Sign In';
+      }
+    });
+  </script>
+</body>
+</html>

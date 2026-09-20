@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.minios.controllers.MainController"
+            prefHeight="800.0" prefWidth="1200.0">
+
+    <left>
+        <VBox styleClass="sidebar">
+            <VBox alignment="CENTER" spacing="10" style="-fx-padding: 0 0 30 0;">
+                <Text text="MiniOS" style="-fx-font-size: 24; -fx-fill: white; -fx-font-weight: bold;"/>
+                <Text text="Simulator 1.0" style="-fx-font-size: 12; -fx-fill: -primary-color;"/>
+            </VBox>
+
+            <Button fx:id="btnDashboard" text="Dashboard" onAction="#handleNavDashboard"
+                    maxWidth="Infinity" styleClass="nav-button, nav-button-active"/>
+            
+            <Button fx:id="btnProcess" text="Process Scheduling" onAction="#handleNavProcess"
+                    maxWidth="Infinity" styleClass="nav-button"/>
+
+            <Button fx:id="btnMemory" text="Memory Management" onAction="#handleNavMemory"
+                    maxWidth="Infinity" styleClass="nav-button"/>
+
+            <Button fx:id="btnFileSystem" text="File System" onAction="#handleNavFileSystem"
+                    maxWidth="Infinity" styleClass="nav-button"/>
+
+            <Button fx:id="btnDeadlock" text="Deadlock Detection" onAction="#handleNavDeadlock"
+                    maxWidth="Infinity" styleClass="nav-button"/>
+
+            <Button fx:id="btnMultithreading" text="Multithreading" onAction="#handleNavMultithreading"
+                    maxWidth="Infinity" styleClass="nav-button"/>
+
+            <Button fx:id="btnReports" text="Reports &amp; Analytics" onAction="#handleNavReports"
+                    maxWidth="Infinity" styleClass="nav-button"/>
+
+            <Region HBox.hgrow="ALWAYS" />
+            
+            <VBox style="-fx-padding: 20;" spacing="5">
+                <Text text="System Status: Online" style="-fx-fill: #4CAF50; -fx-font-size: 10;"/>
+                <Text fx:id="txtClock" text="00:00:00" style="-fx-fill: white; -fx-font-size: 14;"/>
+            </VBox>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="main-container">
+            <!-- Content will be loaded here dynamically -->
+        </StackPane>
+    </center>
+
+</BorderPane>

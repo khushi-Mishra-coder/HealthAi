@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.minios.controllers.ProcessController"
+      spacing="20" styleClass="main-content">
+
+    <VBox styleClass="header">
+        <Text text="Process Scheduling Simulator" styleClass="title-text"/>
+        <Text text="Test various CPU scheduling algorithms with interactive visualization." style="-fx-fill: -text-muted;"/>
+    </VBox>
+
+    <HBox spacing="20">
+        <!-- Input Section -->
+        <VBox styleClass="card" spacing="15" prefWidth="350">
+            <Text text="Add New Process" styleClass="card-title"/>
+            <GridPane hgap="10" vgap="10">
+                <Label text="Process Name:" textFill="white" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtName" promptText="e.g. P1" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Arrival Time:" textFill="white" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtArrival" promptText="0" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Burst Time:" textFill="white" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtBurst" promptText="5" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Priority:" textFill="white" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtPriority" promptText="1" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+            <Button text="Add Process" onAction="#handleAddProcess" maxWidth="Infinity" styleClass="button-primary"/>
+            
+            <Separator style="-fx-background-color: -border-color;"/>
+            
+            <Text text="Select Algorithm" styleClass="card-title"/>
+            <ComboBox fx:id="comboAlgo" maxWidth="Infinity"/>
+            <HBox spacing="10">
+                <Label text="Quantum (RR):" textFill="white" alignment="CENTER_LEFT"/>
+                <TextField fx:id="txtQuantum" prefWidth="50" text="2"/>
+            </HBox>
+            <Button text="Run Simulation" onAction="#handleRunSimulation" maxWidth="Infinity" styleClass="button-secondary"/>
+            <Button text="Clear All" onAction="#handleClear" maxWidth="Infinity" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+        </VBox>
+
+        <!-- Table Section -->
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" spacing="15">
+            <Text text="Process Queue" styleClass="card-title"/>
+            <TableView fx:id="processTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colName" text="Name" prefWidth="70"/>
+                    <TableColumn fx:id="colArrival" text="Arrival" prefWidth="70"/>
+                    <TableColumn fx:id="colBurst" text="Burst" prefWidth="70"/>
+                    <TableColumn fx:id="colPriority" text="Priority" prefWidth="70"/>
+                    <TableColumn fx:id="colWaiting" text="Waiting" prefWidth="70"/>
+                    <TableColumn fx:id="colTAT" text="TAT" prefWidth="70"/>
+                    <TableColumn fx:id="colStatus" text="Status" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+
+    <!-- Visualizer Section -->
+    <VBox styleClass="card" spacing="10" VBox.vgrow="ALWAYS">
+        <Text text="Gantt Chart Visualization" styleClass="card-title"/>
+        <ScrollPane fitToHeight="true" minHeight="100" style="-fx-background: transparent; -fx-background-color: transparent;">
+            <HBox fx:id="ganttChartArea" spacing="2" alignment="CENTER_LEFT" style="-fx-padding: 10;"/>
+        </ScrollPane>
+        <HBox fx:id="timeAxisArea" spacing="2" alignment="CENTER_LEFT" style="-fx-padding: 0 10 10 10;"/>
+    </VBox>
+
+</VBox>

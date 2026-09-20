@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - PersonalizedHealth AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh; background:#f1f5f9; padding:20px;">
+
+  <div style="margin-bottom: 24px; text-align: center;">
+    <a href="index.html" class="brand-logo" style="justify-content: center;">
+      <div class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+      </div>
+      <span>PersonalizedHealth <span style="color:var(--primary); font-weight:600;">AI</span></span>
+    </a>
+    <p style="color: var(--text-muted); font-size: 14px; margin-top: 6px;">Register your personalized health profile</p>
+  </div>
+
+  <div class="card" style="width: 100%; max-width: 480px; padding: 32px;">
+    <h2 style="font-size: 22px; margin-bottom: 6px;">Create Your Account</h2>
+    <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 24px;">Complete your clinical profile for personalized symptom assessment.</p>
+
+    <div id="register-alert" style="display:none; padding:10px 14px; border-radius:var(--radius-btn); margin-bottom:18px; font-size:13px;"></div>
+
+    <form id="register-form">
+      <div class="form-group">
+        <label class="form-label" for="fullName">Full Name</label>
+        <input type="text" id="fullName" class="form-control" placeholder="Jane Doe" required autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input type="email" id="email" class="form-control" placeholder="jane@example.com" required autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">Password (minimum 6 characters)</label>
+        <input type="password" id="password" class="form-control" placeholder="••••••••" required minlength="6" autocomplete="new-password">
+      </div>
+
+      <div class="grid-2" style="gap: 16px;">
+        <div class="form-group">
+          <label class="form-label" for="age">Age</label>
+          <input type="number" id="age" class="form-control" placeholder="28" min="1" max="120" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="gender">Gender</label>
+          <select id="gender" class="form-control" required>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other / Non-binary</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="preferredLanguage">Preferred Language for Consultations</label>
+        <select id="preferredLanguage" class="form-control">
+          <option value="en">English (Default)</option>
+          <option value="hi">हिंदी (Hindi)</option>
+        </select>
+      </div>
+
+      <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%; padding:12px; margin-top:8px;">Register & Access Portal</button>
+    </form>
+
+    <div style="margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border-subtle); text-align: center; font-size: 13.5px; color: var(--text-muted);">
+      Already have an account? <a href="login.html" style="font-weight:600;">Sign In</a>
+    </div>
+  </div>
+
+  <div style="margin-top: 24px;">
+    <a href="index.html" style="font-size: 13px; color: var(--text-muted);">&larr; Back to Home</a>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script>
+    const form = document.getElementById('register-form');
+    const alertBox = document.getElementById('register-alert');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      alertBox.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Creating Account...';
+
+      const data = {
+        fullName: document.getElementById('fullName').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        password: document.getElementById('password').value,
+        age: parseInt(document.getElementById('age').value, 10),
+        gender: document.getElementById('gender').value,
+        preferredLanguage: document.getElementById('preferredLanguage').value
+      };
+
+      try {
+        await AuthAPI.register(data);
+        showToast('Account created successfully!', 'success');
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 500);
+      } catch (err) {
+        alertBox.style.display = 'block';
+        alertBox.style.background = 'var(--urgent-bg)';
+        alertBox.style.color = 'var(--urgent-red-dark)';
+        alertBox.style.border = '1px solid var(--urgent-border)';
+        alertBox.textContent = err.message || 'Registration failed. Please check your information.';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Register & Access Portal';
+      }
+    });
+  </script>
+</body>
+</html>

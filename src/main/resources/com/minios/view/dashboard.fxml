@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.minios.controllers.DashboardController"
+      spacing="30" styleClass="main-content">
+
+    <VBox styleClass="header">
+        <Text text="System Dashboard" styleClass="title-text"/>
+        <Text text="Real-time OS performance and system metrics overview." style="-fx-fill: -text-muted;"/>
+    </VBox>
+
+    <!-- Stats Cards Row -->
+    <HBox spacing="20">
+        <VBox styleClass="card" HBox.hgrow="ALWAYS">
+            <Text text="CPU Load" styleClass="card-title"/>
+            <Text fx:id="txtCpuLoad" text="0%" styleClass="card-value"/>
+            <ProgressBar fx:id="progressCpu" progress="0.0" maxWidth="Infinity" style="-fx-accent: -primary-color;"/>
+        </VBox>
+
+        <VBox styleClass="card" HBox.hgrow="ALWAYS">
+            <Text text="RAM Usage" styleClass="card-title"/>
+            <Text fx:id="txtRamUsage" text="0 MB" styleClass="card-value"/>
+            <ProgressBar fx:id="progressRam" progress="0.0" maxWidth="Infinity" style="-fx-accent: -primary-color;"/>
+        </VBox>
+
+        <VBox styleClass="card" HBox.hgrow="ALWAYS">
+            <Text text="Active Processes" styleClass="card-title"/>
+            <Text fx:id="txtProcessCount" text="0" styleClass="card-value"/>
+            <Text text="Total Threads: 12" style="-fx-fill: #4CAF50;"/>
+        </VBox>
+    </HBox>
+
+    <!-- Charts Row -->
+    <HBox spacing="20" VBox.vgrow="ALWAYS">
+        <VBox styleClass="card" HBox.hgrow="ALWAYS">
+            <Text text="CPU Performance History" styleClass="card-title"/>
+            <AreaChart fx:id="cpuChart">
+                <xAxis><NumberAxis side="BOTTOM" label="Time (s)"/></xAxis>
+                <yAxis><NumberAxis side="LEFT" label="Load (%)" upperBound="100" autoRanging="false"/></yAxis>
+            </AreaChart>
+        </VBox>
+
+        <VBox styleClass="card" HBox.hgrow="ALWAYS">
+            <Text text="Task Distribution" styleClass="card-title"/>
+            <PieChart fx:id="taskChart"/>
+        </VBox>
+    </HBox>
+
+</VBox>

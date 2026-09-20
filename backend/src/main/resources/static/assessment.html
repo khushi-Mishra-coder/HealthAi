@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptom Assessment - PersonalizedHealth AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="banner-left">
+        <span class="pulse-dot"></span>
+        <span><strong>Emergency Red Flag:</strong> Sudden chest pain, difficulty speaking, or severe breathing distress requires immediate emergency medical attention.</span>
+      </div>
+      <div class="banner-actions">
+        <a href="tel:112" class="emergency-btn">Call 112 / 911</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="dashboard.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span>PersonalizedHealth <span style="color:var(--primary); font-weight:600;">AI</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="chat.html" class="nav-link">AI Assistant</a></li>
+        <li><a href="assessment.html" class="nav-link active">Symptom Checker</a></li>
+        <li><a href="nearby-healthcare.html" class="nav-link">Find Doctors</a></li>
+        <li><a href="history.html" class="nav-link">Health Timeline</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 40px 0 60px;">
+    <div class="container" style="max-width: 860px;">
+
+      <!-- Wizard Header & Steps Indicator -->
+      <div style="text-align: center; margin-bottom: 30px;">
+        <h1 style="font-size: 28px; margin-bottom: 8px;">Clinical Disease-Risk Assessment</h1>
+        <p style="color: var(--text-muted); font-size: 14px;">Complete this 3-step clinical triage intake to compute your personalized differential risk profile.</p>
+
+        <div style="display: flex; justify-content: center; gap: 14px; margin-top: 20px;">
+          <span id="step-indicator-1" class="badge badge-teal" style="padding: 6px 14px;">1. Symptoms Intake</span>
+          <span id="step-indicator-2" class="badge" style="padding: 6px 14px; background:#e2e8f0; color:#64748b;">2. Duration & Severity</span>
+          <span id="step-indicator-3" class="badge" style="padding: 6px 14px; background:#e2e8f0; color:#64748b;">3. Patient Medical Context</span>
+        </div>
+      </div>
+
+      <!-- STEP 1: Symptoms -->
+      <div id="step-1" class="card">
+        <h2 style="font-size: 19px; margin-bottom: 6px;">Step 1: What symptoms are you experiencing?</h2>
+        <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 20px;">Type a symptom and press <kbd>Enter</kbd> or comma, or pick from common symptoms below.</p>
+
+        <div class="form-group">
+          <label class="form-label" for="symptom-input">Add Symptom</label>
+          <input type="text" id="symptom-input" class="form-control" placeholder="e.g. fever, cough, chest tightness, sore throat...">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Selected Symptoms:</label>
+          <div id="selected-symptoms-container" style="display: flex; flex-wrap: wrap; gap: 8px; min-height: 48px; padding: 12px; background: var(--bg-subtle); border-radius: var(--radius-btn); border: 1px dashed var(--border-subtle);">
+            <!-- Tags rendered by assessment.js -->
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 24px;">
+          <label class="form-label">Common Clinical Symptoms (Click to Add):</label>
+          <div id="symptom-suggestions" style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <!-- Rendered by assessment.js -->
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 30px;">
+          <button type="button" onclick="nextStep(2)" class="btn btn-primary">Continue to Step 2 &rarr;</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Duration & Severity -->
+      <div id="step-2" class="card" style="display: none;">
+        <h2 style="font-size: 19px; margin-bottom: 6px;">Step 2: Duration & Symptom Severity</h2>
+        <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 24px;">Help our AI engine understand the onset timeline and acute intensity of your condition.</p>
+
+        <div class="form-group">
+          <label class="form-label" for="assess-duration">How long have these symptoms persisted?</label>
+          <select id="assess-duration" class="form-control">
+            <option value="Less than 24 hours">Less than 24 hours</option>
+            <option value="1 to 3 days" selected>1 to 3 days</option>
+            <option value="4 to 7 days">4 to 7 days (About a week)</option>
+            <option value="2 to 3 weeks">2 to 3 weeks</option>
+            <option value="More than 1 month">More than 1 month (Chronic)</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-top: 28px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <label class="form-label" style="margin-bottom: 0;">Symptom Intensity / Discomfort</label>
+            <span id="severity-val-text" class="badge badge-warning" style="font-size: 13px;">Moderate (4-7)</span>
+          </div>
+          <input type="range" id="severity-slider" min="1" max="10" value="5" style="width: 100%; height: 8px; accent-color: var(--primary); cursor: pointer;">
+          <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); margin-top: 6px;">
+            <span>1 - Barely noticeable</span>
+            <span>5 - Moderate discomfort</span>
+            <span>10 - Unbearable / Severe</span>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 36px;">
+          <button type="button" onclick="prevStep(1)" class="btn btn-outline">&larr; Back to Symptoms</button>
+          <button type="button" onclick="nextStep(3)" class="btn btn-primary">Continue to Step 3 &rarr;</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Patient Medical Context -->
+      <div id="step-3" class="card" style="display: none;">
+        <h2 style="font-size: 19px; margin-bottom: 6px;">Step 3: Patient Context & Health History</h2>
+        <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 24px;">Personalized risk factors, chronic illnesses, and drug sensitivities for accurate contraindication checks.</p>
+
+        <div class="grid-2" style="gap: 16px; margin-bottom: 20px;">
+          <div class="form-group">
+            <label class="form-label" for="assess-age">Patient Age</label>
+            <input type="number" id="assess-age" class="form-control" value="30" min="1" max="120">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="assess-gender">Biological Gender</label>
+            <select id="assess-gender" class="form-control">
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other / Non-binary</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Known Chronic Conditions (Check all that apply):</label>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; font-size: 13.5px;">
+            <label><input type="checkbox" name="chronic-condition" value="Hypertension"> Hypertension (High BP)</label>
+            <label><input type="checkbox" name="chronic-condition" value="Type 2 Diabetes"> Type 2 Diabetes</label>
+            <label><input type="checkbox" name="chronic-condition" value="Asthma"> Asthma / Respiratory</label>
+            <label><input type="checkbox" name="chronic-condition" value="Coronary Artery Disease"> Heart Disease</label>
+            <label><input type="checkbox" name="chronic-condition" value="Thyroid Disorder"> Thyroid Disorder</label>
+            <label><input type="checkbox" name="chronic-condition" value="Kidney Disease"> Chronic Kidney Disease</label>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 24px;">
+          <label class="form-label">Known Drug Allergies:</label>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px; font-size: 13.5px;">
+            <label><input type="checkbox" name="allergy" value="Penicillin"> Penicillin</label>
+            <label><input type="checkbox" name="allergy" value="Aspirin / NSAIDs"> Aspirin / NSAIDs</label>
+            <label><input type="checkbox" name="allergy" value="Sulfa drugs"> Sulfa Drugs</label>
+          </div>
+          <input type="text" id="custom-allergy" class="form-control" placeholder="Other allergy (optional)..." style="margin-top: 10px;">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lifestyle-notes">Lifestyle or Medication Notes (Optional)</label>
+          <input type="text" id="lifestyle-notes" class="form-control" placeholder="e.g. Taking Metformin, daily smoker, pregnant...">
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 36px;">
+          <button type="button" onclick="prevStep(2)" class="btn btn-outline">&larr; Back to Step 2</button>
+          <button type="button" id="submit-assessment-btn" onclick="submitAssessment()" class="btn btn-primary btn-lg">
+            Evaluate Clinical Risk &rarr;
+          </button>
+        </div>
+      </div>
+
+      <div class="medical-disclaimer" style="margin-top: 30px;">
+        <strong>Notice:</strong> This assessment evaluates symptom patterns using machine learning algorithms. Results represent statistical differential risk estimates, not definitive medical diagnoses.
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>PersonalizedHealth AI</strong> &copy; 2026. Academic Prototype.</div>
+      <div><a href="dashboard.html">Dashboard</a> &bull; <a href="chat.html">AI Assistant</a> &bull; <a href="history.html">History</a></div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/assessment.js"></script>
+</body>
+</html>

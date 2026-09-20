@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Assessment Timeline - PersonalizedHealth AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="banner-left">
+        <span class="pulse-dot"></span>
+        <span><strong>Emergency Protocol:</strong> If you feel chest pressure, acute dizziness, or sudden weakness, call 112 / 911 immediately.</span>
+      </div>
+      <div class="banner-actions">
+        <a href="tel:112" class="emergency-btn">Call 112 / 911</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="dashboard.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span>PersonalizedHealth <span style="color:var(--primary); font-weight:600;">AI</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="chat.html" class="nav-link">AI Assistant</a></li>
+        <li><a href="assessment.html" class="nav-link">Symptom Checker</a></li>
+        <li><a href="nearby-healthcare.html" class="nav-link">Find Doctors</a></li>
+        <li><a href="history.html" class="nav-link active">Health Timeline</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- Rendered by api.js -->
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 40px 0 60px;">
+    <div class="container" style="max-width: 920px;">
+
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 28px;">
+        <div>
+          <h1 style="font-size: 26px; margin-bottom: 4px;">Health Assessment Timeline</h1>
+          <p style="color: var(--text-muted); font-size: 14px;">Historical records of your preliminary risk consultations and physician navigation logs.</p>
+        </div>
+        <a href="assessment.html" class="btn btn-primary">+ New Assessment</a>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="card" style="padding: 16px; margin-bottom: 24px;">
+        <div class="grid-2" style="gap: 14px;">
+          <div>
+            <input type="text" id="history-search-input" class="form-control" placeholder="Search by symptom, condition name, or doctor specialty...">
+          </div>
+          <div>
+            <select id="history-filter-select" class="form-control">
+              <option value="all">All Assessments</option>
+              <option value="emergency">High Acuity / Emergency Only</option>
+              <option value="frequent">Frequently Reviewed</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Container -->
+      <div id="history-timeline-container">
+        <div style="text-align: center; padding: 40px; color: var(--text-muted);">
+          Loading your health consultation history...
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- History Detail Modal -->
+  <div id="history-modal" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(4px); z-index: 2500; align-items: center; justify-content: center; padding: 20px;">
+    <div class="card" style="width: 100%; max-width: 600px; max-height: 85vh; overflow-y: auto; position: relative;">
+      <button onclick="closeHistoryModal()" style="position: absolute; top: 16px; right: 18px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-muted);">&times;</button>
+      <div id="history-modal-body">
+        <!-- Injected dynamically by history.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>PersonalizedHealth AI</strong> &copy; 2026. Academic Health Project.</div>
+      <div><a href="dashboard.html">Dashboard</a> &bull; <a href="chat.html">AI Assistant</a> &bull; <a href="assessment.html">Assessment</a></div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/history.js"></script>
+</body>
+</html>

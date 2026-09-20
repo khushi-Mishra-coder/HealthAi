@@ -1,0 +1,2480 @@
+{
+  "Abscess": {
+    "specialty": "General Surgeon / General Physician",
+    "typical_symptoms": [
+      "redness",
+      "swelling",
+      "testicular pain"
+    ],
+    "symptom_count": 3
+  },
+  "Acquired Capillary Haemangioma of Eyelid": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "raised red blue lesion"
+    ],
+    "symptom_count": 1
+  },
+  "Acquired Immuno Deficiency Syndrome": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "flu like illness"
+    ],
+    "symptom_count": 1
+  },
+  "Acute encephalitis syndrome": {
+    "specialty": "Neurologist / Infectious Disease",
+    "typical_symptoms": [
+      "confusion",
+      "fever",
+      "headache",
+      "stiff neck",
+      "vomiting"
+    ],
+    "symptom_count": 5
+  },
+  "Adult Inclusion Conjunctivitis": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "reddish eye",
+      "scratchiness"
+    ],
+    "symptom_count": 2
+  },
+  "Alcohol Abuse and Alcoholism": {
+    "specialty": "Psychiatrist / Addiction Specialist",
+    "typical_symptoms": [
+      "acquiring drinking alcohol taking lot time",
+      "difficulty cutting",
+      "drinking large amount alcohol long period",
+      "usage resulting problem",
+      "withdrawal occurring stopping"
+    ],
+    "symptom_count": 5
+  },
+  "Alopecia (hair loss)": {
+    "specialty": "Dermatologist",
+    "typical_symptoms": [
+      "loss hair part head body"
+    ],
+    "symptom_count": 1
+  },
+  "Alzheimer": {
+    "specialty": "Neurologist / Geriatrician",
+    "typical_symptoms": [
+      "difficulty remembering recent event",
+      "disorientation",
+      "mood swing",
+      "problem language"
+    ],
+    "symptom_count": 4
+  },
+  "Amaurosis Fugax": {
+    "specialty": "Ophthalmologist / Neurologist",
+    "typical_symptoms": [
+      "temporary fleeting vision one eye"
+    ],
+    "symptom_count": 1
+  },
+  "Amblyopia": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "decreased vision"
+    ],
+    "symptom_count": 1
+  },
+  "Amoebiasis": {
+    "specialty": "Gastroenterologist",
+    "typical_symptoms": [
+      "bloody diarrhea",
+      "testicular pain"
+    ],
+    "symptom_count": 2
+  },
+  "Anaemia": {
+    "specialty": "Hematologist / General Physician",
+    "typical_symptoms": [
+      "feeling like passing",
+      "feeling tired",
+      "muscle weakness",
+      "shortness breath"
+    ],
+    "symptom_count": 4
+  },
+  "Aniseikonia": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "object different size eye"
+    ],
+    "symptom_count": 1
+  },
+  "Anisometropia": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "one eye myopia eye hyperopia"
+    ],
+    "symptom_count": 1
+  },
+  "Antepartum hemorrhage (Bleeding in late pregnancy)": {
+    "specialty": "Gynecologist / Obstetrician",
+    "typical_symptoms": [
+      "feeling faint upon standing",
+      "increased breath rate",
+      "increased heart rate",
+      "loss lot blood childbirth"
+    ],
+    "symptom_count": 4
+  },
+  "Anthrax": {
+    "specialty": "Infectious Disease / Emergency Medicine",
+    "typical_symptoms": [
+      "abscess",
+      "chest pain",
+      "diarrhea",
+      "fever",
+      "nausea",
+      "shortness breath",
+      "small blister surrounding swelling",
+      "testicular pain",
+      "vomiting"
+    ],
+    "symptom_count": 9
+  },
+  "Anxiety": {
+    "specialty": "Psychiatrist / Clinical Psychologist",
+    "typical_symptoms": [
+      "fast heart rate",
+      "shakiness",
+      "worrying"
+    ],
+    "symptom_count": 3
+  },
+  "Appendicitis": {
+    "specialty": "General Surgeon / Emergency Medicine",
+    "typical_symptoms": [
+      "decreased appetite",
+      "right lower abdominal pain",
+      "vomiting"
+    ],
+    "symptom_count": 3
+  },
+  "Arthritis": {
+    "specialty": "Orthopedic / Rheumatologist",
+    "typical_symptoms": [
+      "decreased range motion",
+      "joint bone pain",
+      "redness",
+      "stiffness",
+      "swelling"
+    ],
+    "symptom_count": 5
+  },
+  "Asbestos-related diseases": {
+    "specialty": "Pulmonologist / Occupational Medicine",
+    "typical_symptoms": [
+      "barky cough",
+      "chest pain",
+      "shortness breath",
+      "wheezing"
+    ],
+    "symptom_count": 4
+  },
+  "Aseptic meningitis": {
+    "specialty": "Neurologist / Infectious Disease",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "neck stiffness"
+    ],
+    "symptom_count": 3
+  },
+  "Asthma": {
+    "specialty": "Pulmonologist",
+    "typical_symptoms": [
+      "chest tightness",
+      "coughing",
+      "recurring episode wheezing",
+      "shortness breath"
+    ],
+    "symptom_count": 4
+  },
+  "Astigmatism": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "distorted blurred vision distance",
+      "eyestrain",
+      "headache"
+    ],
+    "symptom_count": 3
+  },
+  "Atrophy": {
+    "specialty": "Orthopedic / Neurologist",
+    "typical_symptoms": [
+      "progressive muscle weakness"
+    ],
+    "symptom_count": 1
+  },
+  "Autism": {
+    "specialty": "Pediatric Neurologist / Psychiatrist",
+    "typical_symptoms": [
+      "impaired communication",
+      "repetitive behavior",
+      "restricted interest",
+      "trouble social interaction"
+    ],
+    "symptom_count": 4
+  },
+  "Bad Breath (Halitosis)": {
+    "specialty": "Dentist",
+    "typical_symptoms": [
+      "unpleasant smell present breath"
+    ],
+    "symptom_count": 1
+  },
+  "Bell's Palsy": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "change taste",
+      "inability move facial muscle one side",
+      "pain around ear"
+    ],
+    "symptom_count": 3
+  },
+  "Beriberi": {
+    "specialty": "General Physician / Nutritionist",
+    "typical_symptoms": [
+      "fast heart rate",
+      "leg swelling",
+      "shortness breath",
+      "wet"
+    ],
+    "symptom_count": 4
+  },
+  "Black Death": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "muscle weakness"
+    ],
+    "symptom_count": 3
+  },
+  "Bleeding Gums": {
+    "specialty": "Dentist / Periodontist",
+    "typical_symptoms": [
+      "bad breath",
+      "bleeding gum",
+      "loose teeth",
+      "painful",
+      "red",
+      "swollen"
+    ],
+    "symptom_count": 6
+  },
+  "Blindness": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "decreased ability see"
+    ],
+    "symptom_count": 1
+  },
+  "Botulism": {
+    "specialty": "Infectious Disease / Critical Care",
+    "typical_symptoms": [
+      "feeling tired",
+      "muscle weakness",
+      "trouble seeing",
+      "trouble speaking"
+    ],
+    "symptom_count": 4
+  },
+  "Brain Tumour": {
+    "specialty": "Neurologist / Neurosurgeon",
+    "typical_symptoms": [
+      "headache",
+      "mental change",
+      "problem vision",
+      "seizure",
+      "vary depending part brain involved",
+      "vomiting"
+    ],
+    "symptom_count": 6
+  },
+  "Breast Cancer / Carcinoma": {
+    "specialty": "Oncologist / Surgical Oncologist",
+    "typical_symptoms": [
+      "change breast shape",
+      "dimpling skin",
+      "fluid nipple",
+      "lump breast",
+      "newly inverted nipple",
+      "red scaly patch skin breast"
+    ],
+    "symptom_count": 6
+  },
+  "Bronchitis": {
+    "specialty": "Pulmonologist",
+    "typical_symptoms": [
+      "chest discomfort",
+      "coughing mucus",
+      "shortness breath",
+      "wheezing"
+    ],
+    "symptom_count": 4
+  },
+  "Brucellosis": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "coughing"
+    ],
+    "symptom_count": 1
+  },
+  "Bubonic plague": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "swollen lymph node",
+      "vomiting"
+    ],
+    "symptom_count": 4
+  },
+  "Bunion": {
+    "specialty": "Orthopedic",
+    "typical_symptoms": [
+      "painful joint base big toe",
+      "prominent",
+      "red"
+    ],
+    "symptom_count": 3
+  },
+  "Burns": {
+    "specialty": "Dermatologist / Plastic Surgeon",
+    "typical_symptoms": [
+      "red without blister"
+    ],
+    "symptom_count": 1
+  },
+  "Calculi": {
+    "specialty": "Urologist / Nephrologist",
+    "typical_symptoms": [
+      "blood urine",
+      "nausea",
+      "severe pain lower back abdomen",
+      "vomiting"
+    ],
+    "symptom_count": 4
+  },
+  "Campylobacter infection": {
+    "specialty": "Infectious Disease / Gastroenterologist",
+    "typical_symptoms": [
+      "nausea",
+      "testicular pain"
+    ],
+    "symptom_count": 2
+  },
+  "Cancer": {
+    "specialty": "Oncologist",
+    "typical_symptoms": [
+      "abnormal bleeding",
+      "change bowel movement",
+      "lump breast",
+      "prolonged cough",
+      "unexplained weight loss"
+    ],
+    "symptom_count": 5
+  },
+  "Candidiasis": {
+    "specialty": "Dermatologist / Infectious Disease",
+    "typical_symptoms": [
+      "itchy",
+      "white patch vaginal discharge"
+    ],
+    "symptom_count": 2
+  },
+  "Carbon monoxide poisoning": {
+    "specialty": "Emergency Medicine / Toxicologist",
+    "typical_symptoms": [
+      "chest pain",
+      "confusion",
+      "dizziness",
+      "headache",
+      "muscle weakness",
+      "vomiting"
+    ],
+    "symptom_count": 6
+  },
+  "Carpal Tunnel Syndrome": {
+    "specialty": "Neurologist / Orthopedic",
+    "typical_symptoms": [
+      "half ring finger",
+      "index",
+      "middle finger",
+      "numbness",
+      "testicular pain",
+      "tingling thumb",
+      "weak grip"
+    ],
+    "symptom_count": 7
+  },
+  "Cavities": {
+    "specialty": "Dentist",
+    "typical_symptoms": [
+      "difficulty eating",
+      "testicular pain",
+      "tooth loss"
+    ],
+    "symptom_count": 3
+  },
+  "Celiacs disease": {
+    "specialty": "Gastroenterologist",
+    "typical_symptoms": [
+      "abdominal distention",
+      "constipation",
+      "dermatitis herpetiformis",
+      "diarrhoea",
+      "malabsorption",
+      "none non specific",
+      "unintended weight loss"
+    ],
+    "symptom_count": 7
+  },
+  "Cerebral palsy": {
+    "specialty": "Neurologist / Pediatrician",
+    "typical_symptoms": [
+      "poor coordination",
+      "stiff muscle",
+      "tremor",
+      "weak muscle"
+    ],
+    "symptom_count": 4
+  },
+  "Chagas disease": {
+    "specialty": "Infectious Disease / Cardiologist",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "large lymph node"
+    ],
+    "symptom_count": 3
+  },
+  "Chalazion": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "non painful cyst middle eyelid",
+      "red"
+    ],
+    "symptom_count": 2
+  },
+  "Chickenpox": {
+    "specialty": "Dermatologist / General Physician",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "itchy blister",
+      "loss appetite",
+      "small",
+      "tiredness"
+    ],
+    "symptom_count": 6
+  },
+  "Chikungunya Fever": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "fever",
+      "joint bone pain"
+    ],
+    "symptom_count": 2
+  },
+  "Childhood Exotropia": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "nonaligned eye"
+    ],
+    "symptom_count": 1
+  },
+  "Chlamydia": {
+    "specialty": "Infectious Disease / Venereologist",
+    "typical_symptoms": [
+      "burning urination",
+      "discharge penis",
+      "vaginal discharge"
+    ],
+    "symptom_count": 3
+  },
+  "Cholera": {
+    "specialty": "Infectious Disease / Gastroenterologist",
+    "typical_symptoms": [
+      "large amount watery diarrhea",
+      "muscle cramp",
+      "vomiting"
+    ],
+    "symptom_count": 3
+  },
+  "Chorea": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "coordination",
+      "jerky body movement",
+      "mental ability",
+      "problem mood"
+    ],
+    "symptom_count": 4
+  },
+  "Chronic fatigue syndrome": {
+    "specialty": "Neurologist / General Physician",
+    "typical_symptoms": [
+      "long term fatigue",
+      "others"
+    ],
+    "symptom_count": 2
+  },
+  "Chronic obstructive pulmonary disease (COPD)": {
+    "specialty": "Pulmonologist",
+    "typical_symptoms": [
+      "cough sputum production",
+      "shortness breath"
+    ],
+    "symptom_count": 2
+  },
+  "Cleft Lip and Cleft Palate": {
+    "specialty": "Plastic Surgeon / Pediatrician",
+    "typical_symptoms": [
+      "opening upper lip may extend nose palate"
+    ],
+    "symptom_count": 1
+  },
+  "Colitis": {
+    "specialty": "Gastroenterologist",
+    "typical_symptoms": [
+      "anemia",
+      "diarrhea mixed blood",
+      "fever",
+      "testicular pain",
+      "unintended weight loss"
+    ],
+    "symptom_count": 5
+  },
+  "Colorectal Cancer": {
+    "specialty": "Gastroenterologist / Oncologist",
+    "typical_symptoms": [
+      "blood stool",
+      "change bowel movement",
+      "feeling tired time",
+      "unintended weight loss"
+    ],
+    "symptom_count": 4
+  },
+  "Common cold": {
+    "specialty": "General Physician",
+    "typical_symptoms": [
+      "barky cough",
+      "fever",
+      "runny nose",
+      "sore throat"
+    ],
+    "symptom_count": 4
+  },
+  "Condyloma": {
+    "specialty": "Dermatologist / Venereologist",
+    "typical_symptoms": [
+      "skin lesion generally pink color project outward"
+    ],
+    "symptom_count": 1
+  },
+  "Congenital anomalies (birth defects)": {
+    "specialty": "Pediatrician / Geneticist",
+    "typical_symptoms": [
+      "developmental disability",
+      "intellectual disability",
+      "physical disability"
+    ],
+    "symptom_count": 3
+  },
+  "Congestive heart disease": {
+    "specialty": "Cardiologist",
+    "typical_symptoms": [
+      "feeling tired",
+      "leg swelling",
+      "shortness breath"
+    ],
+    "symptom_count": 3
+  },
+  "Corneal Abrasion": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "eye pain",
+      "light sensitivity"
+    ],
+    "symptom_count": 2
+  },
+  "Coronary Heart Disease": {
+    "specialty": "Cardiologist",
+    "typical_symptoms": [
+      "chest pain",
+      "shortness breath"
+    ],
+    "symptom_count": 2
+  },
+  "Coronavirus disease 2019 (COVID-19)": {
+    "specialty": "General Physician / Pulmonologist",
+    "typical_symptoms": [
+      "barky cough",
+      "fatigue",
+      "fever",
+      "loss smell",
+      "shortness breath",
+      "sometimes symptom"
+    ],
+    "symptom_count": 6
+  },
+  "Cough": {
+    "specialty": "General Physician",
+    "typical_symptoms": [
+      "barky cough",
+      "fever",
+      "runny nose"
+    ],
+    "symptom_count": 3
+  },
+  "Crimean Congo haemorrhagic fever (CCHF)": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "bleeding skin",
+      "diarrhea",
+      "fever",
+      "headache",
+      "testicular pain",
+      "vomiting"
+    ],
+    "symptom_count": 6
+  },
+  "Dehydration": {
+    "specialty": "General Physician / Emergency Medicine",
+    "typical_symptoms": [
+      "dizziness",
+      "fatigue",
+      "headache",
+      "nausea",
+      "profuse sweating"
+    ],
+    "symptom_count": 5
+  },
+  "Dementia": {
+    "specialty": "Neurologist / Geriatrician",
+    "typical_symptoms": [
+      "decreased ability think remember",
+      "decreased motivation",
+      "emotional problem",
+      "problem language"
+    ],
+    "symptom_count": 4
+  },
+  "Dengue": {
+    "specialty": "Infectious Disease / General Physician",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "maculopapular rash",
+      "muscle joint pain"
+    ],
+    "symptom_count": 4
+  },
+  "Diabetes Mellitus": {
+    "specialty": "Endocrinologist / Diabetologist",
+    "typical_symptoms": [
+      "frequent urination",
+      "increased hunger",
+      "increased thirst"
+    ],
+    "symptom_count": 3
+  },
+  "Diabetic Retinopathy": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "blindness",
+      "blurry vision",
+      "may symptom",
+      "vision loss"
+    ],
+    "symptom_count": 4
+  },
+  "Diarrhea": {
+    "specialty": "General Physician / Gastroenterologist",
+    "typical_symptoms": [
+      "dehydration",
+      "loose frequent bowel movement"
+    ],
+    "symptom_count": 2
+  },
+  "Diphtheria": {
+    "specialty": "Infectious Disease / ENT Specialist",
+    "typical_symptoms": [
+      "barky cough",
+      "fever",
+      "sore throat"
+    ],
+    "symptom_count": 3
+  },
+  "Down's Syndrome": {
+    "specialty": "Pediatrician / Geneticist",
+    "typical_symptoms": [
+      "characteristic facial feature",
+      "delayed physical growth",
+      "mild moderate intellectual disability"
+    ],
+    "symptom_count": 3
+  },
+  "Dracunculiasis (guinea-worm disease)": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "painful blister lower leg"
+    ],
+    "symptom_count": 1
+  },
+  "Dysentery": {
+    "specialty": "Gastroenterologist",
+    "typical_symptoms": [
+      "bloody diarrhea",
+      "fever",
+      "testicular pain"
+    ],
+    "symptom_count": 3
+  },
+  "Ear infection": {
+    "specialty": "ENT Specialist",
+    "typical_symptoms": [
+      "ear pain",
+      "fever",
+      "hearing loss"
+    ],
+    "symptom_count": 3
+  },
+  "Early pregnancy loss": {
+    "specialty": "Gynecologist / Obstetrician",
+    "typical_symptoms": [
+      "vaginal bleeding without pain"
+    ],
+    "symptom_count": 1
+  },
+  "Ebola": {
+    "specialty": "Infectious Disease / Critical Care",
+    "typical_symptoms": [
+      "diarrhoea",
+      "fever",
+      "headache",
+      "muscular pain",
+      "sore throat",
+      "vaginal bleeding"
+    ],
+    "symptom_count": 6
+  },
+  "Eclampsia": {
+    "specialty": "Gynecologist / Emergency Medicine",
+    "typical_symptoms": [
+      "high blood pressure",
+      "seizure"
+    ],
+    "symptom_count": 2
+  },
+  "Ectopic pregnancy": {
+    "specialty": "Gynecologist / Emergency Medicine",
+    "typical_symptoms": [
+      "testicular pain",
+      "vaginal bleeding"
+    ],
+    "symptom_count": 2
+  },
+  "Eczema": {
+    "specialty": "Dermatologist",
+    "typical_symptoms": [
+      "itchiness",
+      "maculopapular rash",
+      "red skin"
+    ],
+    "symptom_count": 3
+  },
+  "Endometriosis": {
+    "specialty": "Gynecologist",
+    "typical_symptoms": [
+      "infertility",
+      "testicular pain"
+    ],
+    "symptom_count": 2
+  },
+  "Epilepsy": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "nearly undetectable spell",
+      "period vigorous shaking"
+    ],
+    "symptom_count": 2
+  },
+  "Fibroids": {
+    "specialty": "Gynecologist",
+    "typical_symptoms": [
+      "painful heavy period"
+    ],
+    "symptom_count": 1
+  },
+  "Fibromyalgia": {
+    "specialty": "Rheumatologist",
+    "typical_symptoms": [
+      "feeling tired",
+      "sleep problem",
+      "widespread pain"
+    ],
+    "symptom_count": 3
+  },
+  "Food Poisoning": {
+    "specialty": "General Physician / Gastroenterologist",
+    "typical_symptoms": [
+      "abdominal cramp",
+      "diarrhea",
+      "fever",
+      "vomiting"
+    ],
+    "symptom_count": 4
+  },
+  "Frost Bite": {
+    "specialty": "Dermatologist / General Surgeon",
+    "typical_symptoms": [
+      "clumsy",
+      "feeling cold",
+      "numbness",
+      "pale color"
+    ],
+    "symptom_count": 4
+  },
+  "GERD": {
+    "specialty": "Gastroenterologist",
+    "typical_symptoms": [
+      "bad breath",
+      "breathing problem",
+      "chest pain",
+      "heartburn",
+      "taste acid"
+    ],
+    "symptom_count": 5
+  },
+  "Gaming disorder": {
+    "specialty": "Psychiatrist / Clinical Psychologist",
+    "typical_symptoms": [
+      "depression",
+      "playing video game extremely long period time",
+      "social withdrawal"
+    ],
+    "symptom_count": 3
+  },
+  "Gangrene": {
+    "specialty": "General Surgeon / Vascular Surgeon",
+    "typical_symptoms": [
+      "change skin color red black",
+      "coolness",
+      "numbness",
+      "skin breakdown",
+      "testicular pain"
+    ],
+    "symptom_count": 5
+  },
+  "Gastroenteritis": {
+    "specialty": "Gastroenterologist",
+    "typical_symptoms": [
+      "diarrhea",
+      "fever",
+      "testicular pain",
+      "vomiting"
+    ],
+    "symptom_count": 4
+  },
+  "Genital herpes": {
+    "specialty": "Dermatologist / Venereologist",
+    "typical_symptoms": [
+      "flu like symptom",
+      "small blister break open form painful ulcer"
+    ],
+    "symptom_count": 2
+  },
+  "Glaucoma": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "eye pain",
+      "mid dilated pupil",
+      "nausea",
+      "redness eye",
+      "vision loss"
+    ],
+    "symptom_count": 5
+  },
+  "Goitre": {
+    "specialty": "Endocrinologist",
+    "typical_symptoms": [
+      "enlarged thyroid",
+      "fast heartbeat",
+      "irritability",
+      "muscle weakness",
+      "poor tolerance heat",
+      "sleeping problem",
+      "unintended weight loss"
+    ],
+    "symptom_count": 7
+  },
+  "Gonorrhea": {
+    "specialty": "Venereologist / Gynecologist / Urologist",
+    "typical_symptoms": [
+      "burning urination",
+      "discharge penis",
+      "testicular pain",
+      "vaginal discharge"
+    ],
+    "symptom_count": 4
+  },
+  "Guillain-Barr\u00e9 syndrome": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "muscle weakness beginning foot hand"
+    ],
+    "symptom_count": 1
+  },
+  "Haemophilia": {
+    "specialty": "Hematologist",
+    "typical_symptoms": [
+      "easy prolonged bleeding"
+    ],
+    "symptom_count": 1
+  },
+  "Hand, Foot and Mouth Disease": {
+    "specialty": "Pediatrician / Dermatologist",
+    "typical_symptoms": [
+      "fever",
+      "flat discolored spot bump may blister"
+    ],
+    "symptom_count": 2
+  },
+  "Heat-Related Illnesses and Heat waves": {
+    "specialty": "General Physician / Emergency Medicine",
+    "typical_symptoms": [
+      "confusion",
+      "dizziness",
+      "dry damp skin",
+      "headache",
+      "high body temperature",
+      "nausea",
+      "red"
+    ],
+    "symptom_count": 7
+  },
+  "Hepatitis": {
+    "specialty": "Hepatologist / Gastroenterologist",
+    "typical_symptoms": [
+      "poor appetite",
+      "testicular pain",
+      "yellowish skin"
+    ],
+    "symptom_count": 3
+  },
+  "Hepatitis A": {
+    "specialty": "Hepatologist / Gastroenterologist",
+    "typical_symptoms": [
+      "dark urine",
+      "diarrhea",
+      "fever",
+      "jaundice",
+      "nausea",
+      "testicular pain",
+      "vomiting"
+    ],
+    "symptom_count": 7
+  },
+  "Hepatitis B": {
+    "specialty": "Hepatologist / Gastroenterologist",
+    "typical_symptoms": [
+      "dark urine",
+      "testicular pain",
+      "tiredness",
+      "yellowish skin"
+    ],
+    "symptom_count": 4
+  },
+  "Hepatitis C": {
+    "specialty": "Hepatologist / Gastroenterologist",
+    "typical_symptoms": [
+      "typically none"
+    ],
+    "symptom_count": 1
+  },
+  "Hepatitis D": {
+    "specialty": "Hepatologist / Gastroenterologist",
+    "typical_symptoms": [
+      "feeling tired",
+      "nausea vomiting"
+    ],
+    "symptom_count": 2
+  },
+  "Hepatitis E": {
+    "specialty": "Hepatologist / Gastroenterologist",
+    "typical_symptoms": [
+      "jaundice",
+      "nausea"
+    ],
+    "symptom_count": 2
+  },
+  "Herpes Simplex": {
+    "specialty": "Dermatologist / Infectious Disease",
+    "typical_symptoms": [
+      "fever",
+      "small blister break open form painful ulcer",
+      "swollen lymph node"
+    ],
+    "symptom_count": 3
+  },
+  "High risk pregnancy": {
+    "specialty": "Gynecologist / High-Risk Obstetrician",
+    "typical_symptoms": [
+      "frequent urination",
+      "increased hunger",
+      "missed period",
+      "nausea vomiting",
+      "tender breast"
+    ],
+    "symptom_count": 5
+  },
+  "Human papillomavirus": {
+    "specialty": "Gynecologist / Dermatologist",
+    "typical_symptoms": [
+      "wart"
+    ],
+    "symptom_count": 1
+  },
+  "Hypermetropia": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "close object appear blurry"
+    ],
+    "symptom_count": 1
+  },
+  "Hyperthyroidism": {
+    "specialty": "Endocrinologist",
+    "typical_symptoms": [
+      "diarrhea",
+      "enlargement thyroid",
+      "fast heartbeat",
+      "heat intolerance",
+      "irritability",
+      "muscle weakness",
+      "sleeping problem",
+      "unintended weight loss"
+    ],
+    "symptom_count": 8
+  },
+  "Hypothyroid": {
+    "specialty": "Endocrinologist",
+    "typical_symptoms": [
+      "constipation",
+      "depression",
+      "feeling tired",
+      "poor ability tolerate cold",
+      "weight gain"
+    ],
+    "symptom_count": 5
+  },
+  "Hypotonia": {
+    "specialty": "Neurologist / Pediatrician",
+    "typical_symptoms": [
+      "muscle weakness"
+    ],
+    "symptom_count": 1
+  },
+  "Impetigo": {
+    "specialty": "Dermatologist",
+    "typical_symptoms": [
+      "painful",
+      "yellowish skin crust"
+    ],
+    "symptom_count": 2
+  },
+  "Inflammatory Bowel Disease": {
+    "specialty": "Gastroenterologist",
+    "typical_symptoms": [
+      "diarrhea may bloody",
+      "fever",
+      "testicular pain",
+      "unintended weight loss"
+    ],
+    "symptom_count": 4
+  },
+  "Influenza": {
+    "specialty": "General Physician",
+    "typical_symptoms": [
+      "coughing",
+      "feeling tired",
+      "fever",
+      "headache",
+      "muscle joint pain",
+      "runny nose",
+      "sore throat"
+    ],
+    "symptom_count": 7
+  },
+  "Insomnia": {
+    "specialty": "Neurologist / Sleep Specialist",
+    "typical_symptoms": [
+      "daytime sleepiness",
+      "depressed mood",
+      "irritability",
+      "low energy",
+      "trouble sleeping"
+    ],
+    "symptom_count": 5
+  },
+  "Interstitial cystitis": {
+    "specialty": "Urologist / Gynecologist",
+    "typical_symptoms": [
+      "chronic pain bladder",
+      "feeling need urinate right away",
+      "needing urinate often",
+      "pain sex"
+    ],
+    "symptom_count": 4
+  },
+  "Iritis": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "blurred vision",
+      "burning redness eye",
+      "headache",
+      "photophobia",
+      "red eye"
+    ],
+    "symptom_count": 5
+  },
+  "Iron Deficiency Anemia": {
+    "specialty": "Hematologist / General Physician",
+    "typical_symptoms": [
+      "confusion",
+      "feeling tired",
+      "muscle weakness",
+      "pallor",
+      "shortness breath"
+    ],
+    "symptom_count": 5
+  },
+  "Irritable bowel syndrome": {
+    "specialty": "Gastroenterologist",
+    "typical_symptoms": [
+      "constipation",
+      "diarrhea",
+      "testicular pain"
+    ],
+    "symptom_count": 3
+  },
+  "Japanese Encephalitis": {
+    "specialty": "Neurologist / Infectious Disease",
+    "typical_symptoms": [
+      "confusion",
+      "fever",
+      "headache",
+      "seizure",
+      "vomiting"
+    ],
+    "symptom_count": 5
+  },
+  "Jaundice": {
+    "specialty": "Hepatologist / Gastroenterologist",
+    "typical_symptoms": [
+      "itchiness",
+      "yellowish coloration skin white eye"
+    ],
+    "symptom_count": 2
+  },
+  "Kala-azar/ Leishmaniasis": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "enlarged thyroid",
+      "fever",
+      "low red blood cell",
+      "non itchy skin ulcer"
+    ],
+    "symptom_count": 4
+  },
+  "Kaposi\u2019s Sarcoma": {
+    "specialty": "Oncologist / Infectious Disease",
+    "typical_symptoms": [
+      "purple colored skin lesion"
+    ],
+    "symptom_count": 1
+  },
+  "Keratoconjunctivitis Sicca (Dry eye syndrome)": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "blurred vision",
+      "dry eye",
+      "irritation",
+      "redness",
+      "vaginal discharge"
+    ],
+    "symptom_count": 5
+  },
+  "Keratoconus": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "blurry vision",
+      "light sensitivity",
+      "nearsightedness"
+    ],
+    "symptom_count": 3
+  },
+  "Kuru": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "body tremor",
+      "gradual loss coordination",
+      "random outburst laughter"
+    ],
+    "symptom_count": 3
+  },
+  "Laryngitis": {
+    "specialty": "ENT Specialist",
+    "typical_symptoms": [
+      "fever",
+      "hoarse voice",
+      "testicular pain"
+    ],
+    "symptom_count": 3
+  },
+  "Lead poisoning": {
+    "specialty": "Toxicologist / General Physician",
+    "typical_symptoms": [
+      "constipation",
+      "headache",
+      "inability child",
+      "intellectual disability",
+      "irritability",
+      "memory problem",
+      "testicular pain",
+      "tingling hand foot"
+    ],
+    "symptom_count": 8
+  },
+  "Legionellosis": {
+    "specialty": "Pulmonologist / Infectious Disease",
+    "typical_symptoms": [
+      "barky cough",
+      "fever",
+      "headache",
+      "shortness breath",
+      "testicular pain"
+    ],
+    "symptom_count": 5
+  },
+  "Leprosy": {
+    "specialty": "Dermatologist / Infectious Disease",
+    "typical_symptoms": [
+      "decreased ability feel pain"
+    ],
+    "symptom_count": 1
+  },
+  "Leptospirosis": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "testicular pain"
+    ],
+    "symptom_count": 3
+  },
+  "Leukemia": {
+    "specialty": "Hematologist / Oncologist",
+    "typical_symptoms": [
+      "bruising",
+      "feeling tired",
+      "fever",
+      "increased risk infection",
+      "vaginal bleeding"
+    ],
+    "symptom_count": 5
+  },
+  "Lice": {
+    "specialty": "Dermatologist",
+    "typical_symptoms": [
+      "itching result trouble sleeping"
+    ],
+    "symptom_count": 1
+  },
+  "Lung cancer": {
+    "specialty": "Pulmonologist / Oncologist",
+    "typical_symptoms": [
+      "chest pain",
+      "coughing including coughing blood",
+      "shortness breath",
+      "unintended weight loss"
+    ],
+    "symptom_count": 4
+  },
+  "Lupus erythematosus": {
+    "specialty": "Rheumatologist / Immunologist",
+    "typical_symptoms": [
+      "chest pain",
+      "feeling tired",
+      "fever",
+      "hair loss",
+      "mouth ulcer",
+      "painful swollen joint",
+      "red rash",
+      "swollen lymph node"
+    ],
+    "symptom_count": 8
+  },
+  "Lyme disease": {
+    "specialty": "Infectious Disease / Rheumatologist",
+    "typical_symptoms": [
+      "expanding area redness site tick bite",
+      "fever",
+      "headache",
+      "tiredness"
+    ],
+    "symptom_count": 4
+  },
+  "Lymphoma": {
+    "specialty": "Hematologist / Oncologist",
+    "typical_symptoms": [
+      "enlarged lymph node neck",
+      "feeling tired",
+      "fever",
+      "itching",
+      "sweat",
+      "unintended weight loss"
+    ],
+    "symptom_count": 6
+  },
+  "Mad cow disease": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "abnormal behavior",
+      "trouble walking",
+      "unable move",
+      "unintended weight loss"
+    ],
+    "symptom_count": 4
+  },
+  "Malaria": {
+    "specialty": "Infectious Disease / General Physician",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "vomiting"
+    ],
+    "symptom_count": 3
+  },
+  "Marburg fever": {
+    "specialty": "Infectious Disease / Critical Care",
+    "typical_symptoms": [
+      "fever",
+      "muscle weakness",
+      "myalgia"
+    ],
+    "symptom_count": 3
+  },
+  "Mastitis": {
+    "specialty": "Gynecologist / General Surgeon",
+    "typical_symptoms": [
+      "fever",
+      "localized breast pain redness"
+    ],
+    "symptom_count": 2
+  },
+  "Measles": {
+    "specialty": "Pediatrician / Infectious Disease",
+    "typical_symptoms": [
+      "barky cough",
+      "fever",
+      "inflamed eye",
+      "maculopapular rash",
+      "runny nose"
+    ],
+    "symptom_count": 5
+  },
+  "Melanoma": {
+    "specialty": "Dermatologist / Oncologist",
+    "typical_symptoms": [
+      "change color",
+      "irregular edge",
+      "itchiness",
+      "mole increasing size",
+      "skin breakdown"
+    ],
+    "symptom_count": 5
+  },
+  "Middle East respiratory syndrome coronavirus (MERS\u2010CoV)": {
+    "specialty": "Pulmonologist / Infectious Disease",
+    "typical_symptoms": [
+      "barky cough",
+      "fever",
+      "shortness breath"
+    ],
+    "symptom_count": 3
+  },
+  "Migraine": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "headache",
+      "light sensitivity",
+      "nausea",
+      "sensitivity smell",
+      "sensitivity sound"
+    ],
+    "symptom_count": 5
+  },
+  "Mononucleosis": {
+    "specialty": "Infectious Disease / General Physician",
+    "typical_symptoms": [
+      "enlarged lymph node neck",
+      "fever",
+      "sore throat",
+      "tiredness"
+    ],
+    "symptom_count": 4
+  },
+  "Mouth Breathing": {
+    "specialty": "ENT Specialist",
+    "typical_symptoms": [
+      "bad breath",
+      "dry mouth",
+      "fatigue",
+      "hoarse voice",
+      "sore throat",
+      "stuffy itchy nose"
+    ],
+    "symptom_count": 6
+  },
+  "Multiple myeloma": {
+    "specialty": "Hematologist / Oncologist",
+    "typical_symptoms": [
+      "anemia",
+      "bone pain",
+      "frequent infection",
+      "vaginal bleeding"
+    ],
+    "symptom_count": 4
+  },
+  "Multiple sclerosis": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "blindness one eye",
+      "double vision",
+      "muscle weakness",
+      "trouble coordination",
+      "trouble sensation"
+    ],
+    "symptom_count": 5
+  },
+  "Mumps": {
+    "specialty": "Pediatrician / Infectious Disease",
+    "typical_symptoms": [
+      "feeling generally unwell",
+      "fever",
+      "headache",
+      "painful swelling parotid gland",
+      "testicular pain"
+    ],
+    "symptom_count": 5
+  },
+  "Muscular dystrophy": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "breakdown skeletal muscle",
+      "increasing weakening",
+      "trouble walking"
+    ],
+    "symptom_count": 3
+  },
+  "Myasthenia gravis": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "double vision",
+      "drooping eyelid",
+      "trouble talking",
+      "trouble walking",
+      "varying degree muscle weakness"
+    ],
+    "symptom_count": 5
+  },
+  "Myelitis": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "weakness limb"
+    ],
+    "symptom_count": 1
+  },
+  "Myocardial Infarction (Heart Attack)": {
+    "specialty": "Emergency Medicine / Cardiologist",
+    "typical_symptoms": [
+      "arm",
+      "back",
+      "chest pain",
+      "cold sweat",
+      "feeling faint upon standing",
+      "feeling tired",
+      "jaw",
+      "nausea",
+      "neck",
+      "shortness breath",
+      "stomach pain"
+    ],
+    "symptom_count": 11
+  },
+  "Myopia": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "close object appear blurry",
+      "distant object appear blurry",
+      "eye strain",
+      "headache"
+    ],
+    "symptom_count": 4
+  },
+  "Narcolepsy": {
+    "specialty": "Neurologist / Sleep Specialist",
+    "typical_symptoms": [
+      "excessive daytime sleepiness",
+      "hallucination",
+      "involuntary sleep episode",
+      "sudden loss muscle strength"
+    ],
+    "symptom_count": 4
+  },
+  "Nasal Polyps": {
+    "specialty": "ENT Specialist",
+    "typical_symptoms": [
+      "decreased taste",
+      "loss smell",
+      "post nasal drip",
+      "runny nose",
+      "trouble breathing nose"
+    ],
+    "symptom_count": 5
+  },
+  "Nausea and Vomiting of Pregnancy and  Hyperemesis gravidarum": {
+    "specialty": "Gynecologist / Obstetrician",
+    "typical_symptoms": [
+      "nausea vomiting weight loss dehydration occur"
+    ],
+    "symptom_count": 1
+  },
+  "Necrotizing Fasciitis": {
+    "specialty": "Emergency Medicine / General Surgeon",
+    "typical_symptoms": [
+      "fever",
+      "purple colored skin affected area",
+      "severe pain"
+    ],
+    "symptom_count": 3
+  },
+  "Neonatal Respiratory Disease Syndrome(NRDS)": {
+    "specialty": "Neonatologist / Pulmonologist",
+    "typical_symptoms": [
+      "bluish skin coloration",
+      "rapid breathing",
+      "shortness breath"
+    ],
+    "symptom_count": 3
+  },
+  "Neoplasm": {
+    "specialty": "Oncologist",
+    "typical_symptoms": [
+      "lump breast"
+    ],
+    "symptom_count": 1
+  },
+  "Neuralgia": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "episode severe",
+      "shock like pain one side face last second minute",
+      "sudden"
+    ],
+    "symptom_count": 3
+  },
+  "Nipah virus infection": {
+    "specialty": "Infectious Disease / Critical Care",
+    "typical_symptoms": [
+      "barky cough",
+      "confusion",
+      "fever",
+      "headache"
+    ],
+    "symptom_count": 4
+  },
+  "Obesity": {
+    "specialty": "Endocrinologist / Bariatric Specialist",
+    "typical_symptoms": [
+      "increased fat"
+    ],
+    "symptom_count": 1
+  },
+  "Obsessive Compulsive Disorder": {
+    "specialty": "Psychiatrist",
+    "typical_symptoms": [
+      "certain thought repeatedly",
+      "feel need check thing repeatedly",
+      "perform certain routine repeatedly"
+    ],
+    "symptom_count": 3
+  },
+  "Oral Cancer": {
+    "specialty": "Oncologist / ENT Specialist",
+    "typical_symptoms": [
+      "difficulty swallowing",
+      "loose teeth",
+      "lump bump neck",
+      "persistent rough white red patch mouth lasting longer week",
+      "testicular pain",
+      "ulceration"
+    ],
+    "symptom_count": 6
+  },
+  "Orbital Dermoid": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "minimal",
+      "painless lump"
+    ],
+    "symptom_count": 2
+  },
+  "Osteoarthritis": {
+    "specialty": "Orthopedic / Rheumatologist",
+    "typical_symptoms": [
+      "decreased range motion",
+      "joint bone pain",
+      "joint swelling",
+      "stiffness"
+    ],
+    "symptom_count": 4
+  },
+  "Osteomyelitis": {
+    "specialty": "Orthopedic / Infectious Disease",
+    "typical_symptoms": [
+      "fever",
+      "muscle weakness",
+      "overlying redness",
+      "pain specific bone"
+    ],
+    "symptom_count": 4
+  },
+  "Osteoporosis": {
+    "specialty": "Orthopedic / Endocrinologist",
+    "typical_symptoms": [
+      "increased risk broken bone"
+    ],
+    "symptom_count": 1
+  },
+  "Paratyphoid fever": {
+    "specialty": "Infectious Disease / Gastroenterologist",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "maculopapular rash",
+      "testicular pain"
+    ],
+    "symptom_count": 4
+  },
+  "Parkinson's Disease": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "difficulty walking",
+      "rigidity",
+      "shaking",
+      "slowness movement"
+    ],
+    "symptom_count": 4
+  },
+  "Pelvic inflammatory disease": {
+    "specialty": "Gynecologist",
+    "typical_symptoms": [
+      "burning urination",
+      "fever",
+      "irregular menstruation",
+      "lower abdominal pain",
+      "pain sex",
+      "vaginal discharge"
+    ],
+    "symptom_count": 6
+  },
+  "Perennial Allergic Conjunctivitis": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "itchy",
+      "itchy ear",
+      "red",
+      "sneezing",
+      "stuffy itchy nose",
+      "swelling around eye",
+      "watery eye"
+    ],
+    "symptom_count": 7
+  },
+  "Pericarditis": {
+    "specialty": "Cardiologist",
+    "typical_symptoms": [
+      "better sitting worse lying",
+      "fever",
+      "sharp chest pain"
+    ],
+    "symptom_count": 3
+  },
+  "Peritonitis": {
+    "specialty": "General Surgeon / Emergency Medicine",
+    "typical_symptoms": [
+      "fever",
+      "severe pain",
+      "swelling abdomen"
+    ],
+    "symptom_count": 3
+  },
+  "Pinguecula": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "pinkish",
+      "triangular tissue growth cornea"
+    ],
+    "symptom_count": 2
+  },
+  "Pneumonia": {
+    "specialty": "Pulmonologist",
+    "typical_symptoms": [
+      "barky cough",
+      "difficulty breathing",
+      "fever",
+      "rapid breathing"
+    ],
+    "symptom_count": 4
+  },
+  "Poliomyelitis": {
+    "specialty": "Neurologist / Pediatrician",
+    "typical_symptoms": [
+      "muscle weakness resulting inability move"
+    ],
+    "symptom_count": 1
+  },
+  "Polycystic ovary syndrome (PCOS)": {
+    "specialty": "Gynecologist / Endocrinologist",
+    "typical_symptoms": [
+      "acne",
+      "darker",
+      "difficulty getting pregnant",
+      "excess hair",
+      "heavy period",
+      "irregular menstrual period",
+      "patch thick",
+      "testicular pain",
+      "velvety skin"
+    ],
+    "symptom_count": 9
+  },
+  "Porphyria": {
+    "specialty": "Hematologist / Geneticist",
+    "typical_symptoms": [
+      "blister sunlight",
+      "chest pain",
+      "confusion",
+      "constipation",
+      "depending subtype abdominal pain",
+      "fever",
+      "seizure",
+      "vomiting"
+    ],
+    "symptom_count": 8
+  },
+  "Post Menopausal Bleeding": {
+    "specialty": "Gynecologist",
+    "typical_symptoms": [
+      "abnormally frequent",
+      "excessive amount uterine bleeding",
+      "irregular menstruation",
+      "prolonged"
+    ],
+    "symptom_count": 4
+  },
+  "Post-herpetic neuralgia": {
+    "specialty": "Neurologist",
+    "typical_symptoms": [
+      "burning stabbing pain",
+      "pain doesnt go shingle"
+    ],
+    "symptom_count": 2
+  },
+  "Postpartum depression/ Perinatal depression": {
+    "specialty": "Psychiatrist / Gynecologist",
+    "typical_symptoms": [
+      "anxiety",
+      "change sleeping eating pattern",
+      "cry episode",
+      "extreme sadness",
+      "irritability",
+      "low energy"
+    ],
+    "symptom_count": 6
+  },
+  "Preeclampsia": {
+    "specialty": "Gynecologist / Obstetrician",
+    "typical_symptoms": [
+      "high blood pressure",
+      "protein urine"
+    ],
+    "symptom_count": 2
+  },
+  "Premenstrual syndrome": {
+    "specialty": "Gynecologist",
+    "typical_symptoms": [
+      "acne",
+      "bloating",
+      "feeling tired",
+      "mood change",
+      "tender breast"
+    ],
+    "symptom_count": 5
+  },
+  "Presbyopia": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "eyestrain",
+      "hard time reading small print",
+      "headache",
+      "hold reading material farther away"
+    ],
+    "symptom_count": 4
+  },
+  "Preterm birth": {
+    "specialty": "Gynecologist / Neonatologist",
+    "typical_symptoms": [
+      "birth baby younger week gestational age"
+    ],
+    "symptom_count": 1
+  },
+  "Progeria": {
+    "specialty": "Pediatrician / Geneticist",
+    "typical_symptoms": [
+      "growth delay",
+      "hair loss",
+      "short height",
+      "small face"
+    ],
+    "symptom_count": 4
+  },
+  "Psoriasis": {
+    "specialty": "Dermatologist",
+    "typical_symptoms": [
+      "itchy",
+      "red purple darker skin",
+      "scaly patch skin"
+    ],
+    "symptom_count": 3
+  },
+  "Puerperal sepsis": {
+    "specialty": "Gynecologist / Infectious Disease",
+    "typical_symptoms": [
+      "bad smelling vaginal discharge",
+      "fever",
+      "lower abdominal pain"
+    ],
+    "symptom_count": 3
+  },
+  "Pulmonary embolism": {
+    "specialty": "Cardiologist / Emergency Medicine",
+    "typical_symptoms": [
+      "chest pain",
+      "coughing blood",
+      "shortness breath"
+    ],
+    "symptom_count": 3
+  },
+  "Ques fever": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "feeling cold",
+      "shivering"
+    ],
+    "symptom_count": 2
+  },
+  "Quinsy": {
+    "specialty": "ENT Specialist",
+    "typical_symptoms": [
+      "change voice",
+      "fever",
+      "testicular pain",
+      "trouble opening mouth"
+    ],
+    "symptom_count": 4
+  },
+  "Rabies": {
+    "specialty": "Infectious Disease / Emergency Medicine",
+    "typical_symptoms": [
+      "coma",
+      "confusion",
+      "excessive salivation",
+      "fear water",
+      "fever",
+      "hallucination",
+      "paralysis",
+      "trouble sleeping"
+    ],
+    "symptom_count": 8
+  },
+  "Raynaud's Phenomenon": {
+    "specialty": "Rheumatologist / Vascular Specialist",
+    "typical_symptoms": [
+      "affected part turning white",
+      "blue",
+      "burning",
+      "red"
+    ],
+    "symptom_count": 4
+  },
+  "Repetitive strain injury": {
+    "specialty": "Orthopedic / Physiotherapist",
+    "typical_symptoms": [
+      "aching",
+      "extremity weakness",
+      "pulsing pain",
+      "sore wrist",
+      "tingling"
+    ],
+    "symptom_count": 5
+  },
+  "Rheumatic fever": {
+    "specialty": "Cardiologist / Pediatrician",
+    "typical_symptoms": [
+      "erythema marginatum",
+      "fever",
+      "involuntary muscle movement",
+      "multiple painful joint"
+    ],
+    "symptom_count": 4
+  },
+  "Rheumatism": {
+    "specialty": "Rheumatologist",
+    "typical_symptoms": [
+      "painful swollen joint",
+      "swollen",
+      "warm"
+    ],
+    "symptom_count": 3
+  },
+  "Rickets": {
+    "specialty": "Orthopedic / Pediatrician",
+    "typical_symptoms": [
+      "bone pain",
+      "bowed leg",
+      "large forehead",
+      "stunted growth",
+      "trouble sleeping"
+    ],
+    "symptom_count": 5
+  },
+  "Rift Valley fever": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "testicular pain"
+    ],
+    "symptom_count": 3
+  },
+  "Rocky Mountain spotted fever": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "fever",
+      "headache"
+    ],
+    "symptom_count": 2
+  },
+  "Rubella": {
+    "specialty": "Pediatrician / Infectious Disease",
+    "typical_symptoms": [
+      "feeling tired",
+      "fever",
+      "maculopapular rash",
+      "sore throat",
+      "swollen lymph node"
+    ],
+    "symptom_count": 5
+  },
+  "SARS": {
+    "specialty": "Pulmonologist / Emergency Medicine",
+    "typical_symptoms": [
+      "dry cough",
+      "fever",
+      "headache",
+      "muscle ache difficulty breathing"
+    ],
+    "symptom_count": 4
+  },
+  "SIDS": {
+    "specialty": "Pediatrician / Emergency Medicine",
+    "typical_symptoms": [
+      "death child le one year age"
+    ],
+    "symptom_count": 1
+  },
+  "Sarcoidosis": {
+    "specialty": "Pulmonologist / Rheumatologist",
+    "typical_symptoms": [
+      "depends organ involved"
+    ],
+    "symptom_count": 1
+  },
+  "Sarcoma": {
+    "specialty": "Oncologist / Orthopedic Oncologist",
+    "typical_symptoms": [
+      "swell pain near tumor"
+    ],
+    "symptom_count": 1
+  },
+  "Scabies": {
+    "specialty": "Dermatologist",
+    "typical_symptoms": [
+      "itchiness",
+      "pimple like rash"
+    ],
+    "symptom_count": 2
+  },
+  "Scarlet fever": {
+    "specialty": "Pediatrician / Infectious Disease",
+    "typical_symptoms": [
+      "characteristic rash",
+      "fever",
+      "headache",
+      "sore throat",
+      "swollen lymph node"
+    ],
+    "symptom_count": 5
+  },
+  "Schizophrenia": {
+    "specialty": "Psychiatrist",
+    "typical_symptoms": [
+      "confused thinking",
+      "delusion",
+      "hallucination usually hearing voice"
+    ],
+    "symptom_count": 3
+  },
+  "Sciatica": {
+    "specialty": "Orthopedic / Neurologist",
+    "typical_symptoms": [
+      "pain going leg lower back",
+      "weakness numbness affected leg"
+    ],
+    "symptom_count": 2
+  },
+  "Scrapie": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "confusion",
+      "delirium",
+      "dementia",
+      "insomnia",
+      "psychosis",
+      "seizure",
+      "tremor"
+    ],
+    "symptom_count": 7
+  },
+  "Scrub Typhus": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "maculopapular rash"
+    ],
+    "symptom_count": 3
+  },
+  "Scurvy": {
+    "specialty": "General Physician / Nutritionist",
+    "typical_symptoms": [
+      "change hair",
+      "easy prolonged bleeding",
+      "feeling tired",
+      "gum disease",
+      "muscle weakness",
+      "sore arm leg"
+    ],
+    "symptom_count": 6
+  },
+  "Sepsis": {
+    "specialty": "Emergency Medicine / Critical Care",
+    "typical_symptoms": [
+      "confusion",
+      "fever",
+      "increased breathing rate",
+      "increased heart rate",
+      "low blood pressure"
+    ],
+    "symptom_count": 5
+  },
+  "Sexually transmitted infections (STIs)": {
+    "specialty": "Venereologist / Gynecologist",
+    "typical_symptoms": [
+      "testicular pain",
+      "ulcer around genitals",
+      "vaginal discharge"
+    ],
+    "symptom_count": 3
+  },
+  "Shaken Baby Syndrome": {
+    "specialty": "Pediatrician / Emergency Medicine",
+    "typical_symptoms": [
+      "variable"
+    ],
+    "symptom_count": 1
+  },
+  "Shigellosis": {
+    "specialty": "Gastroenterologist / Infectious Disease",
+    "typical_symptoms": [
+      "diarrhea",
+      "fever",
+      "testicular pain"
+    ],
+    "symptom_count": 3
+  },
+  "Shin splints": {
+    "specialty": "Orthopedic / Sports Medicine",
+    "typical_symptoms": [
+      "pain along inside edge shinbone"
+    ],
+    "symptom_count": 1
+  },
+  "Shingles": {
+    "specialty": "Dermatologist / Neurologist",
+    "typical_symptoms": [
+      "painful rash occurring stripe"
+    ],
+    "symptom_count": 1
+  },
+  "Sickle-cell anemia": {
+    "specialty": "Hematologist",
+    "typical_symptoms": [
+      "anemia",
+      "attack pain",
+      "bacterial infection",
+      "stroke",
+      "swelling hand foot"
+    ],
+    "symptom_count": 5
+  },
+  "Smallpox": {
+    "specialty": "Infectious Disease / Dermatologist",
+    "typical_symptoms": [
+      "fever",
+      "fluid filled blister scab",
+      "mouth sore",
+      "vomiting"
+    ],
+    "symptom_count": 4
+  },
+  "Stevens-Johnson syndrome": {
+    "specialty": "Dermatologist / Emergency Medicine",
+    "typical_symptoms": [
+      "fever",
+      "painful skin",
+      "red eye",
+      "skin blister",
+      "skin peeling"
+    ],
+    "symptom_count": 5
+  },
+  "Stomach ulcers": {
+    "specialty": "Gastroenterologist",
+    "typical_symptoms": [
+      "belching",
+      "poor appetite",
+      "unintended weight loss",
+      "upper abdominal pain",
+      "vomiting"
+    ],
+    "symptom_count": 5
+  },
+  "Strep throat": {
+    "specialty": "ENT Specialist / General Physician",
+    "typical_symptoms": [
+      "fever",
+      "large lymph node",
+      "sore throat"
+    ],
+    "symptom_count": 3
+  },
+  "Stroke": {
+    "specialty": "Emergency Medicine / Neurologist",
+    "typical_symptoms": [
+      "dizziness",
+      "inability move feel one side body",
+      "loss vision one side",
+      "problem understanding speaking"
+    ],
+    "symptom_count": 4
+  },
+  "Sub-conjunctival Haemorrhage": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "little pain",
+      "red spot white eye"
+    ],
+    "symptom_count": 2
+  },
+  "Syphilis": {
+    "specialty": "Venereologist / Dermatologist",
+    "typical_symptoms": [
+      "firm",
+      "non itchy skin ulcer",
+      "painless"
+    ],
+    "symptom_count": 3
+  },
+  "Taeniasis": {
+    "specialty": "Gastroenterologist / Infectious Disease",
+    "typical_symptoms": [
+      "testicular pain",
+      "unintended weight loss"
+    ],
+    "symptom_count": 2
+  },
+  "Taeniasis/cysticercosis": {
+    "specialty": "Neurologist / Infectious Disease",
+    "typical_symptoms": [
+      "cm lump skin"
+    ],
+    "symptom_count": 1
+  },
+  "Tay-Sachs disease": {
+    "specialty": "Pediatric Neurologist / Geneticist",
+    "typical_symptoms": [
+      "crawl",
+      "decreased ability turn",
+      "sit"
+    ],
+    "symptom_count": 3
+  },
+  "Tennis elbow": {
+    "specialty": "Orthopedic / Sports Medicine",
+    "typical_symptoms": [
+      "painful tender outer part elbow"
+    ],
+    "symptom_count": 1
+  },
+  "Tetanus": {
+    "specialty": "Infectious Disease / Critical Care",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "muscle spasm"
+    ],
+    "symptom_count": 3
+  },
+  "Thalassaemia": {
+    "specialty": "Hematologist",
+    "typical_symptoms": [
+      "dark urine",
+      "enlarged spleen",
+      "feeling tired",
+      "pale skin",
+      "yellowish skin"
+    ],
+    "symptom_count": 5
+  },
+  "Tinnitus": {
+    "specialty": "ENT Specialist",
+    "typical_symptoms": [
+      "hearing sound external sound present"
+    ],
+    "symptom_count": 1
+  },
+  "Tonsillitis": {
+    "specialty": "ENT Specialist",
+    "typical_symptoms": [
+      "enlargement tonsil",
+      "fever",
+      "large lymph node around neck",
+      "sore throat",
+      "trouble swallowing"
+    ],
+    "symptom_count": 5
+  },
+  "Toxic shock syndrome": {
+    "specialty": "Emergency Medicine / Critical Care",
+    "typical_symptoms": [
+      "fever",
+      "low blood pressure",
+      "maculopapular rash",
+      "skin peeling"
+    ],
+    "symptom_count": 4
+  },
+  "Trachoma": {
+    "specialty": "Ophthalmologist",
+    "typical_symptoms": [
+      "blindness",
+      "eye pain"
+    ],
+    "symptom_count": 2
+  },
+  "Trichinosis": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "diarrhea",
+      "testicular pain",
+      "vomiting"
+    ],
+    "symptom_count": 3
+  },
+  "Trichomoniasis": {
+    "specialty": "Gynecologist / Venereologist",
+    "typical_symptoms": [
+      "bad smelling thin vaginal discharge",
+      "burning urination",
+      "itching genital area",
+      "pain sex"
+    ],
+    "symptom_count": 4
+  },
+  "Tuberculosis": {
+    "specialty": "Pulmonologist / Infectious Disease",
+    "typical_symptoms": [
+      "chronic cough",
+      "cough bloody mucus",
+      "fever",
+      "unintended weight loss"
+    ],
+    "symptom_count": 4
+  },
+  "Tularemia": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "fever",
+      "large lymph node",
+      "non itchy skin ulcer"
+    ],
+    "symptom_count": 3
+  },
+  "Turners Syndrome": {
+    "specialty": "Endocrinologist / Geneticist",
+    "typical_symptoms": [
+      "short stature",
+      "swollen hand foot",
+      "webbed neck"
+    ],
+    "symptom_count": 3
+  },
+  "Urticaria": {
+    "specialty": "Dermatologist / Allergist",
+    "typical_symptoms": [
+      "itchy bump",
+      "raised",
+      "red"
+    ],
+    "symptom_count": 3
+  },
+  "Varicose Veins": {
+    "specialty": "Vascular Surgeon",
+    "typical_symptoms": [
+      "fullness",
+      "pain area"
+    ],
+    "symptom_count": 2
+  },
+  "Vasovagal syncope": {
+    "specialty": "Cardiologist / Neurologist",
+    "typical_symptoms": [
+      "decreased ability see",
+      "loss consciousness may sweating",
+      "ringing ear heartbeat"
+    ],
+    "symptom_count": 3
+  },
+  "Vitamin B12 Deficiency": {
+    "specialty": "General Physician / Hematologist",
+    "typical_symptoms": [
+      "abnormal sensation",
+      "change reflex",
+      "decreased ability think",
+      "depression",
+      "irritability"
+    ],
+    "symptom_count": 5
+  },
+  "Vitiligo": {
+    "specialty": "Dermatologist",
+    "typical_symptoms": [
+      "patch white skin"
+    ],
+    "symptom_count": 1
+  },
+  "Warkany syndrome": {
+    "specialty": "Pediatrician / Geneticist",
+    "typical_symptoms": [
+      "clenched fist overlapping finger",
+      "severe intellectual disability",
+      "small head",
+      "small jaw"
+    ],
+    "symptom_count": 4
+  },
+  "Warts": {
+    "specialty": "Dermatologist",
+    "typical_symptoms": [
+      "painless",
+      "rough skin growth",
+      "small"
+    ],
+    "symptom_count": 3
+  },
+  "Yaws": {
+    "specialty": "Dermatologist / Infectious Disease",
+    "typical_symptoms": [
+      "hard swelling skin",
+      "joint bone pain",
+      "ulcer"
+    ],
+    "symptom_count": 3
+  },
+  "Yellow Fever": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "chill",
+      "fever",
+      "headache",
+      "testicular pain",
+      "yellow skin"
+    ],
+    "symptom_count": 5
+  },
+  "Zika virus disease": {
+    "specialty": "Infectious Disease Specialist",
+    "typical_symptoms": [
+      "fever",
+      "headache",
+      "joint bone pain",
+      "maculopapular rash",
+      "red eye"
+    ],
+    "symptom_count": 5
+  },
+  "lactose intolerance": {
+    "specialty": "Gastroenterologist",
+    "typical_symptoms": [
+      "bloating",
+      "diarrhea",
+      "gas",
+      "nausea",
+      "testicular pain"
+    ],
+    "symptom_count": 5
+  },
+  "papilloedema": {
+    "specialty": "Ophthalmologist / Neurologist",
+    "typical_symptoms": [
+      "headache",
+      "problem vision",
+      "ringing ear heartbeat"
+    ],
+    "symptom_count": 3
+  }
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.minios.controllers.MemoryController"
+      spacing="20" styleClass="main-content">
+
+    <VBox styleClass="header">
+        <Text text="Memory Management Simulator" styleClass="title-text"/>
+        <Text text="Visualize Paging and Page Replacement algorithms in real-time." style="-fx-fill: -text-muted;"/>
+    </VBox>
+
+    <HBox spacing="20">
+        <VBox styleClass="card" spacing="15" prefWidth="300">
+            <Text text="Configuration" styleClass="card-title"/>
+            
+            <Label text="Page Frames:" textFill="white"/>
+            <TextField fx:id="txtFrames" text="3"/>
+
+            <Label text="Reference String (space separated):" textFill="white"/>
+            <TextField fx:id="txtRefString" text="7 0 1 2 0 3 0 4 2 3 0 3 2"/>
+
+            <Label text="Algorithm:" textFill="white"/>
+            <ComboBox fx:id="comboAlgo" maxWidth="Infinity"/>
+
+            <Button text="Start Simulation" onAction="#handleSimulate" maxWidth="Infinity" styleClass="button-primary"/>
+            <Button text="Reset" onAction="#handleReset" maxWidth="Infinity" styleClass="button-secondary"/>
+            
+            <Separator style="-fx-background-color: -border-color;"/>
+            
+            <GridPane hgap="10" vgap="10">
+                <Text text="Total Hits:" style="-fx-fill: white;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Text fx:id="txtHits" text="0" style="-fx-fill: #4CAF50; -fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                
+                <Text text="Total Misses:" style="-fx-fill: white;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Text fx:id="txtMisses" text="0" style="-fx-fill: #f44336; -fx-font-weight: bold;" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                
+                <Text text="Hit Ratio:" style="-fx-fill: white;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <Text fx:id="txtHitRatio" text="0%" style="-fx-fill: -primary-color;" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </GridPane>
+        </VBox>
+
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" spacing="15">
+            <Text text="RAM Visualization" styleClass="card-title"/>
+            <ScrollPane fitToWidth="true" style="-fx-background: transparent; -fx-background-color: transparent;">
+                <GridPane fx:id="gridMemory" hgap="5" vgap="5" style="-fx-padding: 10;"/>
+            </ScrollPane>
+        </VBox>
+    </HBox>
+
+    <VBox styleClass="card" VBox.vgrow="ALWAYS">
+        <Text text="Step-by-Step Execution Log" styleClass="card-title"/>
+        <ListView fx:id="logView" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent; -fx-control-inner-background: #181818;"/>
+    </VBox>
+
+</VBox>

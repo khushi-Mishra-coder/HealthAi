@@ -1,0 +1,48 @@
+# Maven / Java
+backend/target/
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# H2 Database files
+backend/data/
+data/
+*.mv.db
+*.trace.db
+
+# Python / ML Service
+ml-service/__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+ml-service/.venv/
+ml-service/venv/
+.venv/
+venv/
+ENV/
+env/
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Logs
+*.log
+logs/
+backend/logs/
+ml-service/logs/

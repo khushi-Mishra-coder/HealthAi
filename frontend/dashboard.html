@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - PersonalizedHealth AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Emergency Notice Bar -->
+  <div class="emergency-banner">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="banner-left">
+        <span class="pulse-dot"></span>
+        <span><strong>Urgent Medical Notice:</strong> In case of chest tightness, sudden numbness, or acute shortness of breath, dial emergency services immediately.</span>
+      </div>
+      <div class="banner-actions">
+        <a href="tel:112" class="emergency-btn">Call 112 / 911</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="dashboard.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span>PersonalizedHealth <span style="color:var(--primary); font-weight:600;">AI</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+        <li><a href="chat.html" class="nav-link">AI Assistant</a></li>
+        <li><a href="assessment.html" class="nav-link">Symptom Checker</a></li>
+        <li><a href="nearby-healthcare.html" class="nav-link">Find Doctors</a></li>
+        <li><a href="history.html" class="nav-link">Health Timeline</a></li>
+        <li><a href="profile.html" class="nav-link">My Profile</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- Filled by api.js -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Main Content -->
+  <main style="padding: 40px 0 60px;">
+    <div class="container">
+      
+      <!-- Greeting & Overview Card -->
+      <div class="card" style="margin-bottom: 28px; background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%); border-left: 5px solid var(--primary);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div class="badge badge-teal" style="margin-bottom: 8px;">Verified Patient Portal</div>
+            <h1 style="font-size: 26px; margin-bottom: 6px;">Welcome back, <span id="user-greeting-name">Patient</span></h1>
+            <p style="color: var(--text-muted); font-size: 14px;">
+              Profile: <span id="user-profile-meta">Loading details...</span> &bull; Status: <span style="color:var(--success-emerald); font-weight:600;">Active Clinical Monitoring</span>
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <a href="assessment.html" class="btn btn-primary">+ New Assessment</a>
+            <a href="chat.html" class="btn btn-secondary">Open AI Assistant</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Cards Grid -->
+      <div class="grid-4" style="margin-bottom: 36px;">
+        
+        <div class="card card-hover" style="cursor: pointer;" onclick="location.href='assessment.html'">
+          <div style="width: 44px; height: 44px; background: var(--primary-surface); color: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3 style="font-size: 16px; margin-bottom: 6px;">Symptom Triage</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Step-by-step risk scoring evaluated against 261 diseases.</p>
+          <span style="font-size: 13px; font-weight: 600; color: var(--primary);">Begin Checker &rarr;</span>
+        </div>
+
+        <div class="card card-hover" style="cursor: pointer;" onclick="location.href='chat.html'">
+          <div style="width: 44px; height: 44px; background: #eff6ff; color: #2563eb; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 style="font-size: 16px; margin-bottom: 6px;">Conversational AI</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Adaptive questioning in English/Hindi with voice dictation.</p>
+          <span style="font-size: 13px; font-weight: 600; color: #2563eb;">Start Chat &rarr;</span>
+        </div>
+
+        <div class="card card-hover" style="cursor: pointer;" onclick="location.href='nearby-healthcare.html'">
+          <div style="width: 44px; height: 44px; background: #fdf4ff; color: #c026d3; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 style="font-size: 16px; margin-bottom: 6px;">Nearby Healthcare</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Interactive map of clinics, hospitals, and specialists.</p>
+          <span style="font-size: 13px; font-weight: 600; color: #c026d3;">Locate Care &rarr;</span>
+        </div>
+
+        <div class="card card-hover" style="cursor: pointer;" onclick="location.href='history.html'">
+          <div style="width: 44px; height: 44px; background: #fefce8; color: #ca8a04; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 style="font-size: 16px; margin-bottom: 6px;">Health Timeline</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Review past triage logs and physician navigation notes.</p>
+          <span style="font-size: 13px; font-weight: 600; color: #ca8a04;">View History &rarr;</span>
+        </div>
+      </div>
+
+      <!-- Split Layout: Recent History + System Health Telemetry -->
+      <div class="grid-split">
+        <!-- Recent Assessments Section -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Recent Health Assessments</h2>
+            <a href="history.html" style="font-size: 13px; font-weight: 600;">View All History &rarr;</a>
+          </div>
+
+          <div id="recent-history-list" style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="text-align: center; padding: 30px 20px; color: var(--text-muted); font-size: 14px;">
+              Loading your previous assessments...
+            </div>
+          </div>
+        </div>
+
+        <!-- System Diagnostic Telemetry -->
+        <div class="card">
+          <h2 class="card-title" style="margin-bottom: 16px;">Diagnostic Infrastructure Status</h2>
+          <div style="display: flex; flex-direction: column; gap: 14px; font-size: 13.5px;">
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--bg-subtle); border-radius: var(--radius-btn);">
+              <div>
+                <div style="font-weight: 600; color: var(--text-main);">Spring Boot Core API</div>
+                <div style="font-size: 12px; color: var(--text-muted);">Port 8080 &bull; Java 22 &bull; JPA/Hibernate</div>
+              </div>
+              <span class="badge badge-success">Online</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--bg-subtle); border-radius: var(--radius-btn);">
+              <div>
+                <div style="font-weight: 600; color: var(--text-main);">ML Inference Service</div>
+                <div style="font-size: 12px; color: var(--text-muted);">Port 8000 &bull; Random Forest (261 Classes)</div>
+              </div>
+              <span id="ml-status-badge" class="badge badge-teal">Checking...</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--bg-subtle); border-radius: var(--radius-btn);">
+              <div>
+                <div style="font-weight: 600; color: var(--text-main);">Spring AI Clinical Engine</div>
+                <div style="font-size: 12px; color: var(--text-muted);">Adaptive Questioning & Heuristics</div>
+              </div>
+              <span class="badge badge-success">Active</span>
+            </div>
+          </div>
+
+          <div class="medical-disclaimer" style="margin-top: 20px;">
+            Preliminary health assessment platform. Triage indications must be confirmed by certified clinical professionals.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>PersonalizedHealth AI</strong> &copy; 2026. Academic Health Project.</div>
+      <div><a href="chat.html">AI Assistant</a> &bull; <a href="assessment.html">Assessment</a> &bull; <a href="history.html">History</a></div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // 1. Check authentication
+      if (!isLoggedIn()) {
+        window.location.href = 'login.html';
+        return;
+      }
+
+      const user = getUser();
+      if (user) {
+        document.getElementById('user-greeting-name').textContent = user.fullName || user.email;
+        document.getElementById('user-profile-meta').textContent = `Age: ${user.age || 'N/A'}, Gender: ${user.gender || 'N/A'}, Lang: ${user.preferredLanguage === 'hi' ? 'Hindi' : 'English'}`;
+      }
+
+      // 2. Load ML Status
+      try {
+        const mlStatus = await PredictionAPI.getStatus();
+        const badge = document.getElementById('ml-status-badge');
+        if (mlStatus.status === 'UP') {
+          badge.className = 'badge badge-success';
+          badge.textContent = `Online (${mlStatus.total_classes} Diseases)`;
+        } else {
+          badge.className = 'badge badge-warning';
+          badge.textContent = 'Fallback Mode Active';
+        }
+      } catch (e) {
+        const badge = document.getElementById('ml-status-badge');
+        badge.className = 'badge badge-warning';
+        badge.textContent = 'Fallback Mode Active';
+      }
+
+      // 3. Load Recent Assessments
+      try {
+        const histories = await HistoryAPI.getAll();
+        const listEl = document.getElementById('recent-history-list');
+        if (!histories || histories.length === 0) {
+          listEl.innerHTML = `
+            <div style="text-align: center; padding: 24px; color: var(--text-muted); font-size: 14px;">
+              No past assessments found. Complete your first symptom check to see records here.
+              <div style="margin-top: 12px;">
+                <a href="assessment.html" class="btn btn-primary btn-sm">Start First Assessment</a>
+              </div>
+            </div>
+          `;
+          return;
+        }
+
+        listEl.innerHTML = histories.slice(0, 4).map(h => {
+          let badgeClass = 'badge-teal';
+          if (h.riskAssessmentResult?.toLowerCase().includes('infarction') || h.suggestedSpecialty?.toLowerCase().includes('emergency')) {
+            badgeClass = 'badge-urgent';
+          }
+          const dateStr = h.assessmentDate ? new Date(h.assessmentDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }) : 'Recent';
+
+          return `
+            <div style="padding: 14px; border: 1px solid var(--border-subtle); border-radius: var(--radius-btn); background: #ffffff; display: flex; justify-content: space-between; align-items: center; gap: 12px;">
+              <div>
+                <div style="font-weight: 700; color: var(--text-main); font-size: 15px;">${h.riskAssessmentResult || 'Health Check'}</div>
+                <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 2px;">
+                  Symptoms: <strong>${h.symptoms}</strong> &bull; Recommended: <em>${h.suggestedSpecialty || 'General Physician'}</em>
+                </div>
+                <div style="font-size: 11.5px; color: var(--text-subtle); margin-top: 4px;">Date: ${dateStr} &bull; Searched: ${h.searchesCount || 0} times</div>
+              </div>
+              <div style="text-align: right;">
+                <span class="badge ${badgeClass}" style="margin-bottom: 6px;">${h.suggestedSpecialty || 'Assessment'}</span>
+                <div><a href="history.html?id=${h.id}" style="font-size: 12.5px; font-weight: 600;">View Details &rarr;</a></div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      } catch (err) {
+        console.error('Failed to load history:', err);
+      }
+    });
+  </script>
+</body>
+</html>

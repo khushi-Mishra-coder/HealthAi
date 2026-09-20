@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PersonalizedHealth AI - Personalized AI Health Assistant</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Emergency Notice Bar -->
+  <div class="emergency-banner">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+      <div class="banner-left">
+        <span class="pulse-dot"></span>
+        <span><strong>Urgent Medical Notice:</strong> If you are experiencing severe chest pain, sudden difficulty breathing, or unconsciousness, seek immediate emergency help.</span>
+      </div>
+      <div class="banner-actions">
+        <a href="tel:112" class="emergency-btn">Call 112 / 911</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <span>PersonalizedHealth <span style="color:var(--primary); font-weight:600;">AI</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="chat.html" class="nav-link">AI Assistant</a></li>
+        <li><a href="assessment.html" class="nav-link">Symptom Checker</a></li>
+        <li><a href="nearby-healthcare.html" class="nav-link">Find Doctors</a></li>
+        <li><a href="history.html" class="nav-link">Health Timeline</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- Injected dynamically by api.js -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section style="padding: 70px 0 50px; background: linear-gradient(180deg, #f0fdfa 0%, #f8fafc 100%);">
+      <div class="container" style="text-align: center; max-width: 920px;">
+        <div class="badge badge-teal" style="margin-bottom: 20px; font-size: 13px;">
+          <span>Clinical Intelligence & AI Health Navigation</span>
+        </div>
+        <h1 style="font-size: 46px; margin-bottom: 20px; color: var(--text-main); line-height: 1.15;">
+          Personalized AI Health Assistant for <span style="color: var(--primary);">Disease Risk Assessment</span>
+        </h1>
+        <p style="font-size: 18px; color: var(--text-muted); margin-bottom: 36px; line-height: 1.6;">
+          Combining adaptive clinical questioning, Machine Learning disease-risk modeling across 261 conditions, and patient health history for preliminary triage and medical navigation guidance.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 48px;">
+          <a href="assessment.html" class="btn btn-primary btn-lg">Start Symptom Assessment</a>
+          <a href="chat.html" class="btn btn-secondary btn-lg">Consult AI Health Assistant</a>
+        </div>
+
+        <!-- Metrics Row -->
+        <div class="grid-4" style="text-align: left; margin-top: 30px;">
+          <div class="card" style="padding: 20px;">
+            <div style="font-size: 28px; font-weight: 800; color: var(--primary); font-family: var(--font-heading);">261</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--text-main);">Diseases Profiled</div>
+            <div style="font-size: 12px; color: var(--text-muted);">Validated clinical dataset</div>
+          </div>
+          <div class="card" style="padding: 20px;">
+            <div style="font-size: 28px; font-weight: 800; color: var(--primary); font-family: var(--font-heading);">489</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--text-main);">Symptom Features</div>
+            <div style="font-size: 12px; color: var(--text-muted);">Granular symptom mapping</div>
+          </div>
+          <div class="card" style="padding: 20px;">
+            <div style="font-size: 28px; font-weight: 800; color: var(--primary); font-family: var(--font-heading);">Multi-Turn</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--text-main);">Adaptive Dialogue</div>
+            <div style="font-size: 12px; color: var(--text-muted);">English & Hindi assistance</div>
+          </div>
+          <div class="card" style="padding: 20px;">
+            <div style="font-size: 28px; font-weight: 800; color: var(--primary); font-family: var(--font-heading);">Geo-Care</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--text-main);">Specialist Finder</div>
+            <div style="font-size: 12px; color: var(--text-muted);">Nearest clinic navigation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Capabilities Grid -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 40px;">
+          <h2>How PersonalizedHealth AI Assists You</h2>
+          <p style="color: var(--text-muted); margin-top: 8px;">Intelligent clinical guidance designed to bridge patient reporting and physician consultation.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card card-hover">
+            <div style="width: 44px; height: 44px; background: var(--primary-surface); color: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 style="font-size: 18px; margin-bottom: 10px;">Adaptive Conversational AI</h3>
+            <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
+              Interactively clarifies symptoms, duration, and severity across multiple conversational turns in English or Hindi with audio/speech input capabilities.
+            </p>
+          </div>
+
+          <div class="card card-hover">
+            <div style="width: 44px; height: 44px; background: var(--primary-surface); color: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 style="font-size: 18px; margin-bottom: 10px;">Explainable ML Prediction</h3>
+            <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
+              Leverages Random Forest classification trained on 261 diseases to compute differential probabilities, symptom overlap, and risk tiers.
+            </p>
+          </div>
+
+          <div class="card card-hover">
+            <div style="width: 44px; height: 44px; background: var(--primary-surface); color: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 style="font-size: 18px; margin-bottom: 10px;">Personalized History</h3>
+            <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
+              Factors in your age, chronic illnesses (e.g. hypertension, diabetes), and drug allergies to provide customized warnings and timeline tracking.
+            </p>
+          </div>
+        </div>
+
+        <!-- Academic & Clinical Disclaimer Banner -->
+        <div class="medical-disclaimer" style="margin-top: 48px; border-left: 4px solid var(--warning-amber);">
+          <strong style="color: var(--text-main);">Important Medical & Academic Notice:</strong>
+          This application is engineered strictly for <strong>preliminary health-risk assessment, educational research, and healthcare navigation guidance</strong>. It does <em>NOT</em> provide medical diagnosis, clinical treatment plans, or pharmaceutical prescriptions. Always seek the advice of a qualified physician or healthcare provider with any questions you may have regarding a medical condition.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>PersonalizedHealth AI</strong> — Personalized AI Health Assistant &copy; 2026. Academic Prototype.
+      </div>
+      <div>
+        <a href="index.html">Home</a> &bull;
+        <a href="chat.html">AI Assistant</a> &bull;
+        <a href="assessment.html">Assessment</a> &bull;
+        <a href="nearby-healthcare.html">Find Care</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+</body>
+</html>

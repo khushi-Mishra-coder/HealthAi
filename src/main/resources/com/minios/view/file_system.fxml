@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.minios.controllers.FileSystemController"
+      spacing="20" styleClass="main-content">
+
+    <VBox styleClass="header">
+        <Text text="File System Simulator" styleClass="title-text"/>
+        <Text text="Mock file system with directory structure and basic operations." style="-fx-fill: -text-muted;"/>
+    </VBox>
+
+    <HBox spacing="20" VBox.vgrow="ALWAYS">
+        <VBox styleClass="card" spacing="15" prefWidth="300">
+            <Text text="Operations" styleClass="card-title"/>
+            
+            <TextField fx:id="txtName" promptText="Enter name..."/>
+            
+            <HBox spacing="10">
+                <Button text="New Folder" onAction="#handleNewFolder" maxWidth="Infinity" HBox.hgrow="ALWAYS" styleClass="button-primary"/>
+                <Button text="New File" onAction="#handleNewFile" maxWidth="Infinity" HBox.hgrow="ALWAYS" styleClass="button-primary"/>
+            </HBox>
+
+            <Button text="Rename Selected" onAction="#handleRename" maxWidth="Infinity" styleClass="button-secondary"/>
+            <Button text="Delete Selected" onAction="#handleDelete" maxWidth="Infinity" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+            
+            <Separator style="-fx-background-color: -border-color;"/>
+            
+            <Text text="Storage Status" styleClass="card-title"/>
+            <ProgressBar fx:id="progressStorage" progress="0.2" maxWidth="Infinity" style="-fx-accent: -primary-color;"/>
+            <Text text="Used: 2.1 GB / 10 GB" style="-fx-fill: -text-muted;"/>
+        </VBox>
+
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" spacing="15">
+            <Text text="File Explorer" styleClass="card-title"/>
+            <TreeView fx:id="fileTreeView" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent;"/>
+        </VBox>
+    </HBox>
+
+</VBox>
